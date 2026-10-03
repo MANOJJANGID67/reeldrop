@@ -3,11 +3,11 @@ version: '3.8'
 services:
   worker:
     build:
-      context: ./worker
+      context: ./worker2
     ports:
       - "8080:8080"
     environment:
       - PORT=8080
       - WORKER_SECRET=super_secret_token
-      - MOCK_MEDIA_PROVIDER=true
+      - MOCK_MEDIA_PROVIDER=false
     restart: unless-stopped
