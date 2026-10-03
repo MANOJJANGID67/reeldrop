@@ -1,0 +1,11 @@
+User-Agent: *
+Allow: /
+Allow: /instagram-reel-downloader
+Allow: /reel-downloader
+Allow: /guides/
+Disallow: /api/
+Disallow: /worker/
+Disallow: /internal/
+Disallow: /admin/
+
+Sitemap: https://www.reeldrop.com/sitemap.xml
