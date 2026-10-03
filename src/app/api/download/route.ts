@@ -22,31 +22,10 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(err, { status: response.status });
     }
 
-    // If the worker returns JSON with a direct URL (CDN link), proxy it from the edge
+    // If the worker returns JSON with a direct URL (CDN link), pass it to the frontend
     const contentType = response.headers.get('Content-Type');
     if (contentType && contentType.includes('application/json')) {
       const data = await response.json();
-      if (data.url) {
-        const cdnResponse = await fetch(data.url, {
-          headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
-            'Referer': 'https://www.instagram.com/'
-          }
-        });
-        
-        if (!cdnResponse.ok) {
-          return NextResponse.json({ error: 'Failed to proxy CDN media.' }, { status: 500 });
-        }
-
-        const cdnHeaders = new Headers();
-        cdnHeaders.set('Content-Disposition', cdnResponse.headers.get('Content-Disposition') || 'attachment; filename="media.mp4"');
-        cdnHeaders.set('Content-Type', cdnResponse.headers.get('Content-Type') || 'video/mp4');
-
-        return new NextResponse(cdnResponse.body, {
-          status: 200,
-          headers: cdnHeaders
-        });
-      }
       return NextResponse.json(data, { status: 200 });
     }
 

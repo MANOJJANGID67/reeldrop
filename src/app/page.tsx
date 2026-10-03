@@ -26,7 +26,21 @@ export default function Home() {
         throw new Error(data.error || 'Failed to download. The URL might be private or invalid.');
       }
 
-      // Trigger file download
+      // Check if it's a JSON response containing a direct URL
+      const contentType = res.headers.get('Content-Type');
+      if (contentType && contentType.includes('application/json')) {
+        const data = await res.json();
+        if (data.url) {
+          // Open direct URL in a new tab to trigger download
+          window.open(data.url, '_blank');
+          setSuccess(true);
+          setUrl('');
+          setLoading(false);
+          return;
+        }
+      }
+
+      // Otherwise trigger file download from blob
       const blob = await res.blob();
       const downloadUrl = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
