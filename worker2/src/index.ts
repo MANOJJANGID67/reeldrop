@@ -5,7 +5,7 @@ import rateLimit from 'express-rate-limit';
 import dotenv from 'dotenv';
 import path from 'path';
 import fs from 'fs';
-import { YtDlpProvider, MockMediaProvider, MediaProvider } from './provider';
+import { RapidApiProvider, MockMediaProvider, MediaProvider } from './provider';
 
 dotenv.config();
 
@@ -13,7 +13,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 const workerSecret = process.env.WORKER_SECRET;
 const isMock = () => process.env.MOCK_MEDIA_PROVIDER === 'true';
-const getProvider = (): MediaProvider => isMock() ? new MockMediaProvider() : new YtDlpProvider();
+const getProvider = (): MediaProvider => isMock() ? new MockMediaProvider() : new RapidApiProvider();
 
 const tempDir = path.join(__dirname, '..', 'temp');
 if (!fs.existsSync(tempDir)) {
@@ -59,6 +59,11 @@ app.post('/api/download', authenticate, async (req: express.Request, res: expres
     const provider = getProvider();
     const outputPath = await provider.downloadMedia(url, tempDir);
     
+    // If it's a URL, send it directly
+    if (outputPath.startsWith('http')) {
+      return res.json({ url: outputPath });
+    }
+
     // Send file and then delete it
     res.download(outputPath, (err: any) => {
       if (err) {

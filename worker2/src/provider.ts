@@ -1,34 +1,117 @@
-import ytDlpExec, { create } from 'yt-dlp-exec';
 import { randomUUID } from 'crypto';
-import fs from 'fs/promises';
+import fs from 'fs';
 import path from 'path';
-
-// In this specific Windows testing environment, the npm postinstall failed, 
-// so we fall back to the globally installed pip binary if on Windows. 
-// In Docker/Linux (production), yt-dlp-exec's native binary will work out-of-the-box.
-const ytDlp = process.platform === 'win32' 
-  ? create('C:\\Users\\admin\\AppData\\Roaming\\Python\\Python314\\Scripts\\yt-dlp.exe') 
-  : ytDlpExec;
+import axios from 'axios';
+import { pipeline } from 'stream/promises';
 
 export interface MediaProvider {
   downloadMedia(url: string, outputDir: string): Promise<string>;
 }
 
-export class YtDlpProvider implements MediaProvider {
+export class RapidApiProvider implements MediaProvider {
+  private apiKeys: string[];
+  private host: string;
+  private currentKeyIndex: number = 0;
+
+  constructor() {
+    this.host = 'cobalt-social-media-downloader.p.rapidapi.com';
+    // User can add more keys here
+    this.apiKeys = [
+      'ef3cb10848mshdaa839ca0aa0a7bp10bc97jsnd19912a59ca4'
+    ];
+  }
+
+  // Smart function to find the video URL anywhere in the RapidAPI JSON response
+  private findVideoUrl(obj: any): string | null {
+    if (typeof obj === 'string') {
+      if ((obj.includes('.mp4') || obj.includes('.jpg') || obj.includes('.png') || obj.includes('video') || obj.includes('tunnel')) && obj.startsWith('http')) {
+        return obj;
+      }
+      return null;
+    }
+    if (typeof obj === 'object' && obj !== null) {
+      // Prioritize keys that sound like video URLs
+      for (const key of Object.keys(obj)) {
+        if (typeof obj[key] === 'string' && obj[key].startsWith('http') && (key.toLowerCase().includes('media') || key.toLowerCase().includes('url') || key.toLowerCase().includes('video') || obj[key].includes('.mp4') || obj[key].includes('.jpg'))) {
+          return obj[key];
+        }
+      }
+      // Recursively search
+      for (const key of Object.keys(obj)) {
+        const found = this.findVideoUrl(obj[key]);
+        if (found) return found;
+      }
+    }
+    return null;
+  }
+
   async downloadMedia(url: string, outputDir: string): Promise<string> {
     const filename = `${randomUUID()}.mp4`;
     const outputPath = path.join(outputDir, filename);
+    let attempts = 0;
 
-    // Instagram URL is validated before this method is called.
-    await ytDlp(url, {
-      output: outputPath,
-      format: 'best',
-      noPlaylist: true,
-      // Provide some common headers to help yt-dlp avoid blocks
-      addHeader: 'referer:https://www.instagram.com/'
-    });
+    while (attempts < this.apiKeys.length) {
+      const apiKey = this.apiKeys[this.currentKeyIndex];
+      const apiUrl = `https://${this.host}/cobalt-download/`;
+      
+      console.log(`[RapidAPI] Trying key index ${this.currentKeyIndex}...`);
+      try {
+        const response = await axios.post(apiUrl, 
+          {
+            downloadMode: "auto",
+            filenameStyle: "basic",
+            url: url,
+            videoQuality: "1080"
+          },
+          {
+            headers: {
+              'Content-Type': 'application/json',
+              'x-rapidapi-host': this.host,
+              'x-rapidapi-key': apiKey
+            },
+            timeout: 15000
+          }
+        );
 
-    return outputPath;
+        console.log(`[RapidAPI] Raw Response:`, JSON.stringify(response.data).substring(0, 500));
+
+        const videoUrl = this.findVideoUrl(response.data);
+        if (!videoUrl) {
+          throw new Error("Could not find video URL in the API response.");
+        }
+
+        console.log(`[RapidAPI] Found video URL. Downloading to ${outputPath}...`);
+        
+        // Download the actual MP4 file
+        const videoResponse = await axios.get(videoUrl, { 
+          responseType: 'stream',
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
+            'Referer': 'https://www.instagram.com/'
+          },
+          timeout: 20000
+        });
+        await pipeline(videoResponse.data, fs.createWriteStream(outputPath));
+        
+        return outputPath;
+
+      } catch (error: any) {
+        console.error(`[RapidAPI] Error with key index ${this.currentKeyIndex}:`, error?.response?.status || error.message);
+        
+        // If Rate Limited or Forbidden, switch to the next key
+        if (error?.response?.status === 429 || error?.response?.status === 403) {
+          console.log(`[RapidAPI] Limit reached for key index ${this.currentKeyIndex}. Switching...`);
+          this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
+          attempts++;
+        } else {
+          // Unknown error, still try the next key just in case
+          this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
+          attempts++;
+        }
+      }
+    }
+
+    throw new Error('All API keys failed or limits reached.');
   }
 }
 
@@ -36,13 +119,8 @@ export class MockMediaProvider implements MediaProvider {
   async downloadMedia(url: string, outputDir: string): Promise<string> {
     const filename = `mock-${randomUUID()}.mp4`;
     const outputPath = path.join(outputDir, filename);
-    
-    // Simulate a delay
     await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Create a dummy file
-    await fs.writeFile(outputPath, 'mock-video-content');
-    
+    await fs.promises.writeFile(outputPath, 'mock-video-content');
     return outputPath;
   }
 }
