@@ -32,7 +32,7 @@ export default function Home() {
         const data = await res.json();
         if (data.url) {
           // Open direct URL in a new tab to trigger download
-          window.open(data.url, '_blank');
+          window.location.href = data.url;
           setSuccess(true);
           setUrl('');
           setLoading(false);
