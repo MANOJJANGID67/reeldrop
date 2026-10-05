@@ -15,7 +15,7 @@ export default function Home() {
     setSuccess(false);
 
     try {
-      const res = await fetch('/api/download', {
+      const res = await fetch('https://campaigns-compilation-praise-fame.trycloudflare.com/api/download-file', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url })
