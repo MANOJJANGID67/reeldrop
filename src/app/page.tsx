@@ -15,7 +15,7 @@ export default function Home() {
     setSuccess(false);
 
     try {
-      const res = await fetch('https://reeldrop-api-2026.loca.lt/api/download-file', {
+      const res = await fetch('https://angry-fly-98.loca.lt/api/download-file', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Bypass-Tunnel-Reminder': 'true' },
         body: JSON.stringify({ url })
