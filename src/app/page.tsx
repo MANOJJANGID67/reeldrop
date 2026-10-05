@@ -15,9 +15,9 @@ export default function Home() {
     setSuccess(false);
 
     try {
-      const res = await fetch('https://campaigns-compilation-praise-fame.trycloudflare.com/api/download-file', {
+      const res = await fetch('https://reeldrop-api-2026.loca.lt/api/download-file', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', 'Bypass-Tunnel-Reminder': 'true' },
         body: JSON.stringify({ url })
       });
 
