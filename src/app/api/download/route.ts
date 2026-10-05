@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from 'next/server';
+﻿import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
@@ -22,14 +22,22 @@ export async function POST(req: NextRequest) {
       return NextResponse.json(err, { status: response.status });
     }
 
-    // If the worker returns JSON with a direct URL (CDN link), pass it to the frontend
     const contentType = response.headers.get('Content-Type');
     if (contentType && contentType.includes('application/json')) {
       const data = await response.json();
+      if (data.url) {
+        const videoResponse = await fetch(data.url);
+        const headers = new Headers(videoResponse.headers);
+        headers.set('Content-Disposition', 'attachment; filename="reeldrop_video.mp4"');
+        
+        return new NextResponse(videoResponse.body, {
+          status: 200,
+          headers
+        });
+      }
       return NextResponse.json(data, { status: 200 });
     }
 
-    // Otherwise, proxy the raw file stream back to the client
     const headers = new Headers();
     headers.set('Content-Disposition', response.headers.get('Content-Disposition') || 'attachment; filename="reel.mp4"');
     headers.set('Content-Type', response.headers.get('Content-Type') || 'video/mp4');
