@@ -5,7 +5,7 @@ export const runtime = 'edge';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const workerUrl = 'http://130.210.2.35.nip.io/api/download';
+    const workerUrl = 'https://api.reelsave.app/api/download';
     const workerSecret = process.env.WORKER_SECRET || 'super_secret_token';
 
     const response = await fetch(workerUrl, {
