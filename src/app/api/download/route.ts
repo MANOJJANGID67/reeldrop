@@ -5,7 +5,7 @@ export const runtime = 'edge';
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const workerUrl = 'https://named-vast-broad-centered.trycloudflare.com/api/download-file';
+    const workerUrl = 'https://campaigns-compilation-praise-fame.trycloudflare.com/api/download-file';
     const workerSecret = process.env.WORKER_SECRET || 'super_secret_token';
 
     const response = await fetch(workerUrl, {
