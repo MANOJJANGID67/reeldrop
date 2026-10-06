@@ -4,47 +4,59 @@ export const runtime = 'edge';
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json();
-    const workerUrl = 'https://angry-fly-98.loca.lt/api/download-file';
-    const workerSecret = process.env.WORKER_SECRET || 'super_secret_token';
-
-    const response = await fetch(workerUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${workerSecret}`
-      },
-      body: JSON.stringify(body)
-    });
-
-    if (!response.ok) {
-      const err = await response.json().catch(() => ({ error: 'Worker error' }));
-      return NextResponse.json(err, { status: response.status });
+    const body = await req.json().catch(() => null);
+    if (!body || typeof body.url !== 'string' || !body.url.startsWith('https://www.instagram.com/')) {
+      return NextResponse.json(
+        { error: 'Invalid URL. Must be a valid Instagram URL starting with https://www.instagram.com/' },
+        { status: 400 }
+      );
     }
 
-    const contentType = response.headers.get('Content-Type');
-    if (contentType && contentType.includes('application/json')) {
-      const data = await response.json();
-      if (data.url) {
-        const videoResponse = await fetch(data.url);
-        const headers = new Headers(videoResponse.headers);
-        headers.set('Content-Disposition', 'attachment; filename="reeldrop_video.mp4"');
-        
-        return new NextResponse(videoResponse.body, {
-          status: 200,
-          headers
-        });
+    const workerUrl = process.env.WORKER_URL || 'https://reeldrop.duckdns.org/api/download';
+    const workerSecret = process.env.WORKER_SECRET;
+
+    const headers: Record<string, string> = {
+      'Content-Type': 'application/json'
+    };
+
+    if (workerSecret) {
+      headers['x-worker-secret'] = workerSecret;
+    }
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 60000);
+
+    let workerResponse: Response;
+    try {
+      workerResponse = await fetch(workerUrl, {
+        method: 'POST',
+        headers,
+        body: JSON.stringify({ url: body.url }),
+        signal: controller.signal
+      });
+    } catch (err: unknown) {
+      clearTimeout(timeoutId);
+      if (err instanceof Error && err.name === 'AbortError') {
+        return NextResponse.json({ error: 'Worker request timed out' }, { status: 504 });
       }
-      return NextResponse.json(data, { status: 200 });
+      throw err;
+    } finally {
+      clearTimeout(timeoutId);
     }
 
-    const headers = new Headers();
-    headers.set('Content-Disposition', response.headers.get('Content-Disposition') || 'attachment; filename="reel.mp4"');
-    headers.set('Content-Type', response.headers.get('Content-Type') || 'video/mp4');
+    if (!workerResponse.ok) {
+      const err = await workerResponse.json().catch(() => null);
+      const errorMessage = err?.error || err?.message || 'Worker error';
+      return NextResponse.json({ error: errorMessage }, { status: workerResponse.status });
+    }
 
-    return new NextResponse(response.body, {
+    const responseHeaders = new Headers();
+    responseHeaders.set('Content-Type', 'video/mp4');
+    responseHeaders.set('Content-Disposition', 'attachment; filename="reeldrop.mp4"');
+
+    return new Response(workerResponse.body, {
       status: 200,
-      headers
+      headers: responseHeaders
     });
   } catch (error) {
     console.error('Frontend API error:', error);

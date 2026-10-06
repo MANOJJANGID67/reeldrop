@@ -15,7 +15,7 @@ export default function Home() {
     setSuccess(false);
 
     try {
-      const res = await fetch('https://reeldrop.duckdns.org/api/download', {
+      const res = await fetch('/api/download', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url })
@@ -26,21 +26,7 @@ export default function Home() {
         throw new Error(data.error || 'Failed to download. The URL might be private or invalid.');
       }
 
-      // Check if it's a JSON response containing a direct URL
-      const contentType = res.headers.get('Content-Type');
-      if (contentType && contentType.includes('application/json')) {
-        const data = await res.json();
-        if (data.url) {
-          // Open direct URL in a new tab to trigger download
-          window.location.href = data.url;
-          setSuccess(true);
-          setUrl('');
-          setLoading(false);
-          return;
-        }
-      }
-
-      // Otherwise trigger file download from blob
+      // Trigger file download from blob
       const blob = await res.blob();
       const downloadUrl = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
