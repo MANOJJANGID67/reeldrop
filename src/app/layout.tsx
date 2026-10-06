@@ -5,26 +5,42 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Instagram Reel Downloader - Download Public Reels | REELDROP',
-  description: 'Download supported public Instagram Reels online with REELDROP. Paste a public Reel URL, process it, and download the available media quickly and easily.',
+  title: 'reeldropnow - Download Instagram Reels Video Online',
+  description: 'reeldropnow: Download Instagram Reels Video online to your device. 100% free, unlimited, high quality MP4 video downloader with no watermarks.',
+  keywords: [
+    'reeldropnow',
+    'Instagram Reels Downloader',
+    'Download Instagram Reels Video',
+    'Instagram Video Downloader online',
+    'Save Instagram Reels MP4',
+    'Fast Instagram Reel Download',
+    'Free Reels Downloader'
+  ],
   alternates: {
-    canonical: 'https://www.reeldrop.com',
+    canonical: 'https://reeldrop.duckdns.org',
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   openGraph: {
-    title: 'REELDROP - Public Reels. Simple Downloads.',
-    description: 'Download supported public Instagram Reels online with REELDROP. Paste a public Reel URL, process it, and download the available media quickly and easily.',
-    url: 'https://www.reeldrop.com',
-    siteName: 'REELDROP',
+    title: 'reeldropnow - Download Instagram Reels Video Online',
+    description: 'Download Instagram Reels Video online to your device. Completely free service with unlimited downloads and original audio.',
+    url: 'https://reeldrop.duckdns.org',
+    siteName: 'reeldropnow',
     images: [
       {
-        url: 'https://www.reeldrop.com/og-image.jpg',
+        url: 'https://reeldrop.duckdns.org/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'REELDROP',
+        alt: 'reeldropnow - Download Instagram Reels Video Online',
       },
     ],
     locale: 'en_US',
@@ -32,10 +48,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'REELDROP - Public Reels. Simple Downloads.',
-    description: 'Download supported public Instagram Reels online with REELDROP. Paste a public Reel URL, process it, and download the available media quickly and easily.',
-    images: ['https://www.reeldrop.com/og-image.jpg'],
+    title: 'reeldropnow - Download Instagram Reels Video Online',
+    description: 'Download Instagram Reels Video online to your device. Fast, safe, free MP4 video downloads.',
+    images: ['https://reeldrop.duckdns.org/og-image.jpg'],
   },
+  other: {
+    'geo.region': 'US',
+    'geo.placename': 'Global',
+    'geo.position': '0;0',
+    'ICBM': '0, 0',
+  }
 };
 
 export default function RootLayout({
@@ -43,14 +65,51 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const jsonLd = {
+  const jsonLdWebApp = {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "REELDROP",
-    "url": "https://www.reeldrop.com",
-    "description": "Download supported public Instagram Reels online with REELDROP. Paste a public Reel URL, process it, and download the available media quickly and easily.",
+    "name": "reeldropnow",
+    "alternateName": ["ReelDrop", "ReelDropNow", "Instagram Reels Downloader"],
+    "url": "https://reeldrop.duckdns.org",
+    "description": "Download Instagram Reels Video online to your device. Free, fast and high-speed MP4 downloads.",
     "applicationCategory": "MultimediaApplication",
-    "operatingSystem": "All"
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  };
+
+  const jsonLdFaq = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is reeldropnow free to use?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, we offer a completely free service with no limits or additional costs. We embed some ads that help us maintain our servers and bandwidth."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How to download Instagram Reels online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Simply copy the Instagram Reel link, paste it into reeldropnow, and click 'Download Media'. Your high-definition MP4 video will download directly to your device."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the copyright and legal terms for downloading Reels?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Downloading content from Instagram without the permission of the owner may violate the platform's terms of service and could result in account suspension if used without concern. Only download content you have permission to use or that is licensed under Creative Commons."
+        }
+      }
+    ]
   };
 
   return (
@@ -58,7 +117,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebApp) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
         />
       </head>
       <body className={inter.className}>
@@ -69,13 +132,23 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
-                <h3 className="font-bold text-gray-900 mb-4">REELDROP</h3>
+                <h3 className="font-bold text-gray-900 mb-4">reeldropnow</h3>
+                <p className="text-xs text-gray-500 mb-4">Download Instagram Reels Video online to your device effortlessly.</p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li><a href="/" className="hover:text-indigo-600">Home</a></li>
                   <li><a href="/instagram-reel-downloader" className="hover:text-indigo-600">Instagram Reel Downloader</a></li>
                   <li><a href="/reel-downloader" className="hover:text-indigo-600">Reel Downloader</a></li>
                   <li><a href="/instagram-video-downloader" className="hover:text-indigo-600">Instagram Video Downloader</a></li>
                 </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-4">Pricing & Limits</h3>
+                <p className="text-xs text-gray-600 leading-relaxed mb-3">
+                  We offer a completely free service with no limits or additional costs. We embed some ads that help us maintain our services.
+                </p>
+                <span className="inline-block bg-green-100 text-green-800 text-xs px-2.5 py-1 rounded-full font-semibold">
+                  100% Free Forever
+                </span>
               </div>
               <div>
                 <h3 className="font-bold text-gray-900 mb-4">Guides</h3>
@@ -87,17 +160,17 @@ export default function RootLayout({
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-4">Legal</h3>
+                <h3 className="font-bold text-gray-900 mb-4">Legal & Compliance</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li><a href="/privacy" className="hover:text-indigo-600">Privacy Policy</a></li>
                   <li><a href="/terms" className="hover:text-indigo-600">Terms of Service</a></li>
-                  <li><a href="/dmca" className="hover:text-indigo-600">DMCA</a></li>
+                  <li><a href="/dmca" className="hover:text-indigo-600">DMCA Notice</a></li>
                 </ul>
               </div>
             </div>
-            <div className="mt-8 pt-8 border-t border-gray-100 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center">
-              <p>REELDROP is an independent service. Not affiliated with Instagram.</p>
-              <p>&copy; {new Date().getFullYear()} REELDROP. Public Reels. Simple Downloads.</p>
+            <div className="mt-8 pt-8 border-t border-gray-100 text-sm text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+              <p>reeldropnow is an independent public media extraction utility. Not affiliated with Instagram™ or Meta™.</p>
+              <p>&copy; {new Date().getFullYear()} reeldropnow. Download Instagram Reels Video online to your device.</p>
             </div>
           </div>
         </footer>
