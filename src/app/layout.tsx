@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Script from 'next/script';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -68,6 +69,7 @@ export const metadata: Metadata = {
     shortcut: '/icon.png',
   },
   other: {
+    'google-adsense-account': 'ca-pub-1524992524941156',
     'geo.region': 'US',
     'geo.placename': 'Global',
     'geo.position': '0;0',
@@ -130,10 +132,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
+        <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1524992524941156"
           crossOrigin="anonymous"
+          strategy="afterInteractive"
         />
         <script
           type="application/ld+json"
