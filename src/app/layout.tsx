@@ -52,6 +52,9 @@ export const metadata: Metadata = {
     description: 'Download Instagram Reels Video online to your device. Fast, safe, free MP4 video downloads.',
     images: ['https://reeldropnow.com/og-image.jpg'],
   },
+  verification: {
+    google: 'googlede2c616247bee979',
+  },
   other: {
     'geo.region': 'US',
     'geo.placename': 'Global',
