@@ -161,20 +161,23 @@ export default function RootLayout({
               </span>
             </Link>
             <nav className="flex items-center gap-5 text-sm font-medium text-gray-600">
-              <Link href="/instagram-reel-downloader" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
-                Reels
+              <Link href="/services" className="hover:text-indigo-600 transition-colors hidden lg:inline-block">
+                Services
               </Link>
-              <Link href="/instagram-video-downloader" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
-                Videos
+              <Link href="/pricing" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+                Pricing
+              </Link>
+              <Link href="/faq" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
+                FAQ
+              </Link>
+              <Link href="/reviews" className="hover:text-indigo-600 transition-colors hidden lg:inline-block">
+                Reviews
               </Link>
               <Link href="/about" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
                 About
               </Link>
               <Link href="/contact" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
                 Contact
-              </Link>
-              <Link href="/guides/how-to-download-instagram-reels" className="hover:text-indigo-600 transition-colors">
-                Guide
               </Link>
               <Link 
                 href="/" 
@@ -196,39 +199,43 @@ export default function RootLayout({
                   <img src="/logo.svg" alt="reeldropnow logo" className="w-6 h-6 rounded-lg" />
                   <h3 className="font-bold text-gray-900 text-base">reeldrop<span className="text-indigo-600">now</span></h3>
                 </div>
-                <p className="text-xs text-gray-500 mb-4">Download Instagram Reels Video online to your device effortlessly.</p>
+                <p className="text-xs text-gray-500 mb-4">Fast, free, and private online Instagram Reels and video downloader.</p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li><a href="/" className="hover:text-indigo-600">Home</a></li>
-                  <li><a href="/instagram-reel-downloader" className="hover:text-indigo-600">Instagram Reel Downloader</a></li>
-                  <li><a href="/reel-downloader" className="hover:text-indigo-600">Reel Downloader</a></li>
-                  <li><a href="/instagram-video-downloader" className="hover:text-indigo-600">Instagram Video Downloader</a></li>
+                  <li><Link href="/" className="hover:text-indigo-600">Home</Link></li>
+                  <li><Link href="/services" className="hover:text-indigo-600">Services &amp; Products</Link></li>
+                  <li><Link href="/pricing" className="hover:text-indigo-600">Pricing &amp; Plans</Link></li>
+                  <li><Link href="/reviews" className="hover:text-indigo-600">User Reviews</Link></li>
+                  <li><Link href="/faq" className="hover:text-indigo-600">FAQ &amp; Help</Link></li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-4">Pricing & Limits</h3>
-                <p className="text-xs text-gray-600 leading-relaxed mb-3">
-                  We offer a completely free service with no limits or additional costs. We embed some ads that help us maintain our services.
-                </p>
-                <span className="inline-block bg-green-100 text-green-800 text-xs px-2.5 py-1 rounded-full font-semibold">
-                  100% Free Forever
-                </span>
-              </div>
-              <div>
-                <h3 className="font-bold text-gray-900 mb-4">Guides</h3>
+                <h3 className="font-bold text-gray-900 mb-4">Popular Tools</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li><a href="/guides/how-to-download-instagram-reels" className="hover:text-indigo-600">How to Download Reels</a></li>
-                  <li><a href="/guides/instagram-reel-downloader-iphone" className="hover:text-indigo-600">Reels on iPhone</a></li>
-                  <li><a href="/guides/instagram-reel-downloader-pc" className="hover:text-indigo-600">Reels on PC</a></li>
-                  <li><a href="/guides/instagram-video-download-guide" className="hover:text-indigo-600">Video Guide</a></li>
+                  <li><Link href="/instagram-reel-downloader" className="hover:text-indigo-600">Instagram Reel Downloader</Link></li>
+                  <li><Link href="/reel-downloader" className="hover:text-indigo-600">Reel Downloader</Link></li>
+                  <li><Link href="/instagram-video-downloader" className="hover:text-indigo-600">Instagram Video Downloader</Link></li>
+                  <li><Link href="/download-instagram-reels" className="hover:text-indigo-600">Download Instagram Reels</Link></li>
+                  <li><Link href="/public-instagram-reel-downloader" className="hover:text-indigo-600">Public Reel Downloader</Link></li>
                 </ul>
               </div>
               <div>
-                <h3 className="font-bold text-gray-900 mb-4">Legal & Compliance</h3>
+                <h3 className="font-bold text-gray-900 mb-4">Guides &amp; Tutorials</h3>
+                <ul className="space-y-2 text-sm text-gray-600">
+                  <li><Link href="/guides/how-to-download-instagram-reels" className="hover:text-indigo-600">How to Download Reels</Link></li>
+                  <li><Link href="/guides/instagram-reel-downloader-iphone" className="hover:text-indigo-600">Reels on iPhone</Link></li>
+                  <li><Link href="/guides/instagram-reel-downloader-android" className="hover:text-indigo-600">Reels on Android</Link></li>
+                  <li><Link href="/guides/instagram-reel-downloader-pc" className="hover:text-indigo-600">Reels on PC</Link></li>
+                  <li><Link href="/guides/how-to-save-instagram-reels" className="hover:text-indigo-600">Save Reels with Audio</Link></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="font-bold text-gray-900 mb-4">Legal &amp; Compliance</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li><Link href="/about" className="hover:text-indigo-600">About Us</Link></li>
                   <li><Link href="/contact" className="hover:text-indigo-600">Contact Us</Link></li>
                   <li><Link href="/privacy" className="hover:text-indigo-600">Privacy Policy</Link></li>
                   <li><Link href="/terms" className="hover:text-indigo-600">Terms of Service</Link></li>
+                  <li><Link href="/cookie-policy" className="hover:text-indigo-600">Cookie Policy</Link></li>
                   <li><Link href="/dmca" className="hover:text-indigo-600">DMCA Notice</Link></li>
                 </ul>
               </div>
