@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Inter } from 'next/font/google';
+import CookieConsent from '../components/CookieConsent';
 import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -160,11 +161,17 @@ export default function RootLayout({
               </span>
             </Link>
             <nav className="flex items-center gap-5 text-sm font-medium text-gray-600">
-              <Link href="/instagram-reel-downloader" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+              <Link href="/instagram-reel-downloader" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
                 Reels
               </Link>
-              <Link href="/instagram-video-downloader" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+              <Link href="/instagram-video-downloader" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
                 Videos
+              </Link>
+              <Link href="/about" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+                About
+              </Link>
+              <Link href="/contact" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+                Contact
               </Link>
               <Link href="/guides/how-to-download-instagram-reels" className="hover:text-indigo-600 transition-colors">
                 Guide
@@ -218,9 +225,11 @@ export default function RootLayout({
               <div>
                 <h3 className="font-bold text-gray-900 mb-4">Legal & Compliance</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li><a href="/privacy" className="hover:text-indigo-600">Privacy Policy</a></li>
-                  <li><a href="/terms" className="hover:text-indigo-600">Terms of Service</a></li>
-                  <li><a href="/dmca" className="hover:text-indigo-600">DMCA Notice</a></li>
+                  <li><Link href="/about" className="hover:text-indigo-600">About Us</Link></li>
+                  <li><Link href="/contact" className="hover:text-indigo-600">Contact Us</Link></li>
+                  <li><Link href="/privacy" className="hover:text-indigo-600">Privacy Policy</Link></li>
+                  <li><Link href="/terms" className="hover:text-indigo-600">Terms of Service</Link></li>
+                  <li><Link href="/dmca" className="hover:text-indigo-600">DMCA Notice</Link></li>
                 </ul>
               </div>
             </div>
@@ -230,6 +239,7 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <CookieConsent />
       </body>
     </html>
   );
