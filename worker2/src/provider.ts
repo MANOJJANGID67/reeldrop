@@ -1,126 +1,71 @@
-import { randomUUID } from 'crypto';
+import { exec } from 'child_process';
+import util from 'util';
 import fs from 'fs';
-import path from 'path';
-import axios from 'axios';
-import { pipeline } from 'stream/promises';
+
+const execPromise = util.promisify(exec);
 
 export interface MediaProvider {
-  downloadMedia(url: string, outputDir: string): Promise<string>;
+  getMediaUrl(postUrl: string): Promise<string>;
 }
 
-export class RapidApiProvider implements MediaProvider {
-  private apiKeys: string[];
-  private host: string;
-  private currentKeyIndex: number = 0;
+export class YtDlpProvider implements MediaProvider {
+  private scraperApiKey: string = 'cad7ecf7d1f925847946d50cde03d710';
 
-  constructor() {
-    this.host = 'cobalt-social-media-downloader.p.rapidapi.com';
-    // User can add more keys here
-    this.apiKeys = [
-      'ef3cb10848mshdaa839ca0aa0a7bp10bc97jsnd19912a59ca4'
-    ];
+  private getIpv6Pool(): string[] {
+    const poolPath = '/app/ipv6_pool.txt';
+    if (fs.existsSync(poolPath)) {
+      const lines = fs.readFileSync(poolPath, 'utf8')
+        .split('\n')
+        .map(l => l.trim())
+        .filter(l => l.length > 0 && l.startsWith('2603:'));
+      if (lines.length > 0) return lines;
+    }
+    return ['2603:c021:4002:937e:0:67fa:8c45:4f1a'];
   }
 
-  // Smart function to find the video URL anywhere in the RapidAPI JSON response
-  private findVideoUrl(obj: any): string | null {
-    if (typeof obj === 'string') {
-      if ((obj.includes('.mp4') || obj.includes('.jpg') || obj.includes('.png') || obj.includes('video') || obj.includes('tunnel')) && obj.startsWith('http')) {
-        return obj;
-      }
-      return null;
-    }
-    if (typeof obj === 'object' && obj !== null) {
-      // Prioritize keys that sound like video URLs
-      for (const key of Object.keys(obj)) {
-        if (typeof obj[key] === 'string' && obj[key].startsWith('http') && (key.toLowerCase().includes('media') || key.toLowerCase().includes('url') || key.toLowerCase().includes('video') || obj[key].includes('.mp4') || obj[key].includes('.jpg'))) {
-          return obj[key];
-        }
-      }
-      // Recursively search
-      for (const key of Object.keys(obj)) {
-        const found = this.findVideoUrl(obj[key]);
-        if (found) return found;
-      }
-    }
-    return null;
+  private getRandomIpv6(): string {
+    const pool = this.getIpv6Pool();
+    const randomIndex = Math.floor(Math.random() * pool.length);
+    return pool[randomIndex];
   }
 
-  async downloadMedia(url: string, outputDir: string): Promise<string> {
-    const filename = `${randomUUID()}.mp4`;
-    const outputPath = path.join(outputDir, filename);
-    let attempts = 0;
+  async getMediaUrl(postUrl: string): Promise<string> {
+    const selectedIp = this.getRandomIpv6();
+    console.log(`[YtDlpProvider] Primary Attempt: Rotated to IPv6 ${selectedIp} for: ${postUrl}`);
 
-    while (attempts < this.apiKeys.length) {
-      const apiKey = this.apiKeys[this.currentKeyIndex];
-      const apiUrl = `https://${this.host}/cobalt-download/`;
+    // 1. PRIMARY: Try free rotating IPv6 from our 25-IP pool
+    try {
+      const command = `yt-dlp --source-address "${selectedIp}" --force-ipv6 --no-warnings -f b --dump-json "${postUrl}"`;
+      const { stdout } = await execPromise(command, { timeout: 25000 });
+      const data = JSON.parse(stdout);
+
+      if (data.url) {
+        console.log(`[YtDlpProvider] Primary Success! URL extracted using IPv6: ${selectedIp}`);
+        return data.url;
+      }
+    } catch (primaryError: any) {
+      console.warn(`[YtDlpProvider] Primary IPv6 attempt failed (${primaryError.message}). Triggering ScraperAPI Proxy Fallback...`);
+    }
+
+    // 2. FALLBACK: ScraperAPI Residential Proxy for 100% guarantee
+    try {
+      console.log(`[YtDlpProvider] Fallback Attempt: Using ScraperAPI Proxy for: ${postUrl}`);
+      const proxyUrl = `http://scraperapi:${this.scraperApiKey}@proxy-server.scraperapi.com:8001`;
+      const proxyCommand = `yt-dlp --proxy "${proxyUrl}" --no-warnings -f b --dump-json "${postUrl}"`;
       
-      console.log(`[RapidAPI] Trying key index ${this.currentKeyIndex}...`);
-      try {
-        const response = await axios.post(apiUrl, 
-          {
-            downloadMode: "auto",
-            filenameStyle: "basic",
-            url: url,
-            videoQuality: "1080"
-          },
-          {
-            headers: {
-              'Content-Type': 'application/json',
-              'x-rapidapi-host': this.host,
-              'x-rapidapi-key': apiKey
-            },
-            timeout: 15000
-          }
-        );
+      const { stdout } = await execPromise(proxyCommand, { timeout: 35000 });
+      const data = JSON.parse(stdout);
 
-        console.log(`[RapidAPI] Raw Response:`, JSON.stringify(response.data).substring(0, 500));
-
-        const videoUrl = this.findVideoUrl(response.data);
-        if (!videoUrl) {
-          throw new Error("Could not find video URL in the API response.");
-        }
-
-        console.log(`[RapidAPI] Found video URL. Downloading to ${outputPath}...`);
-        
-        // Download the actual MP4 file
-        const videoResponse = await axios.get(videoUrl, { 
-          responseType: 'stream',
-          headers: {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36',
-            'Referer': 'https://www.instagram.com/'
-          },
-          timeout: 20000
-        });
-        await pipeline(videoResponse.data, fs.createWriteStream(outputPath));
-        
-        return outputPath;
-
-      } catch (error: any) {
-        console.error(`[RapidAPI] Error with key index ${this.currentKeyIndex}:`, error?.response?.status || error.message);
-        
-        // If Rate Limited or Forbidden, switch to the next key
-        if (error?.response?.status === 429 || error?.response?.status === 403) {
-          console.log(`[RapidAPI] Limit reached for key index ${this.currentKeyIndex}. Switching...`);
-          this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
-          attempts++;
-        } else {
-          // Unknown error, still try the next key just in case
-          this.currentKeyIndex = (this.currentKeyIndex + 1) % this.apiKeys.length;
-          attempts++;
-        }
+      if (data.url) {
+        console.log('[YtDlpProvider] Fallback Success! URL extracted via ScraperAPI proxy.');
+        return data.url;
       }
+      throw new Error('No direct stream URL returned from proxy fallback');
+    } catch (proxyError: any) {
+      console.error('[YtDlpProvider] ScraperAPI Proxy Error:', proxyError.message);
+      throw new Error('Failed to fetch media using all available routes');
     }
-
-    throw new Error('All API keys failed or limits reached.');
   }
 }
 
-export class MockMediaProvider implements MediaProvider {
-  async downloadMedia(url: string, outputDir: string): Promise<string> {
-    const filename = `mock-${randomUUID()}.mp4`;
-    const outputPath = path.join(outputDir, filename);
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    await fs.promises.writeFile(outputPath, 'mock-video-content');
-    return outputPath;
-  }
-}
+export const provider = new YtDlpProvider();
