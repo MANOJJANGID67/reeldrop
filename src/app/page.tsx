@@ -15,9 +15,9 @@ export default function Home() {
     setSuccess(false);
 
     try {
-      const res = await fetch('https://angry-fly-98.loca.lt/api/download-file', {
+      const res = await fetch('https://reeldrop.duckdns.org/api/download', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Bypass-Tunnel-Reminder': 'true' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ url })
       });
 
