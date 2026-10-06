@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'How to Save Instagram Reels | REELDROP',
   description: 'A quick tutorial on saving public Instagram Reels to your local storage without extra apps.',
-  alternates: { canonical: 'https://www.reeldrop.com/guides/how-to-save-instagram-reels' }
+  alternates: { canonical: 'https://reeldropnow.com/guides/how-to-save-instagram-reels' }
 };
 
 export default function Page() {

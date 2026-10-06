@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Instagram Reel Downloader for PC | REELDROP',
   description: 'Save Instagram Reels to your Windows or Mac PC in high quality MP4 format.',
-  alternates: { canonical: 'https://www.reeldrop.com/guides/instagram-reel-downloader-pc' }
+  alternates: { canonical: 'https://reeldropnow.com/guides/instagram-reel-downloader-pc' }
 };
 
 export default function Page() {

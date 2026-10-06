@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'How to Download Instagram Reels | REELDROP',
   description: 'A complete guide on how to safely download public Instagram Reels directly to your device.',
-  alternates: { canonical: 'https://www.reeldrop.com/guides/how-to-download-instagram-reels' }
+  alternates: { canonical: 'https://reeldropnow.com/guides/how-to-download-instagram-reels' }
 };
 
 export default function Page() {

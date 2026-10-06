@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# temp testing & probes
+probe*.js
+payload.json
+*.mp4
+worker2/node_modules/
+/googlede2c616247bee979.html

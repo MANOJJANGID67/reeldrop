@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy | REELDROP',
   description: 'REELDROP privacy policy and data practices.',
-  alternates: { canonical: 'https://www.reeldrop.com/privacy' }
+  alternates: { canonical: 'https://reeldropnow.com/privacy' }
 };
 
 export default function Privacy() {

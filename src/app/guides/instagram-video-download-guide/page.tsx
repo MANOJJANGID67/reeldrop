@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Instagram Video Download Guide | REELDROP',
   description: 'Learn how to easily download public Instagram videos to your device using REELDROP.',
-  alternates: { canonical: 'https://www.reeldrop.com/guides/instagram-video-download-guide' }
+  alternates: { canonical: 'https://reeldropnow.com/guides/instagram-video-download-guide' }
 };
 
 export default function Page() {

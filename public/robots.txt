@@ -8,4 +8,4 @@ Disallow: /worker/
 Disallow: /internal/
 Disallow: /admin/
 
-Sitemap: https://www.reeldrop.com/sitemap.xml
+Sitemap: https://reeldropnow.com/sitemap.xml

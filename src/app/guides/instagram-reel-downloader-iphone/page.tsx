@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Instagram Reel Downloader for iPhone | REELDROP',
   description: 'Learn how to save Instagram Reels straight to your iPhone camera roll using REELDROP.',
-  alternates: { canonical: 'https://www.reeldrop.com/guides/instagram-reel-downloader-iphone' }
+  alternates: { canonical: 'https://reeldropnow.com/guides/instagram-reel-downloader-iphone' }
 };
 
 export default function Page() {

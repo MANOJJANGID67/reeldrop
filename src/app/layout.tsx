@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Free Reels Downloader'
   ],
   alternates: {
-    canonical: 'https://reeldrop.duckdns.org',
+    canonical: 'https://reeldropnow.com',
   },
   robots: {
     index: true,
@@ -33,11 +33,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'reeldropnow - Download Instagram Reels Video Online',
     description: 'Download Instagram Reels Video online to your device. Completely free service with unlimited downloads and original audio.',
-    url: 'https://reeldrop.duckdns.org',
+    url: 'https://reeldropnow.com',
     siteName: 'reeldropnow',
     images: [
       {
-        url: 'https://reeldrop.duckdns.org/og-image.jpg',
+        url: 'https://reeldropnow.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'reeldropnow - Download Instagram Reels Video Online',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'reeldropnow - Download Instagram Reels Video Online',
     description: 'Download Instagram Reels Video online to your device. Fast, safe, free MP4 video downloads.',
-    images: ['https://reeldrop.duckdns.org/og-image.jpg'],
+    images: ['https://reeldropnow.com/og-image.jpg'],
   },
   other: {
     'geo.region': 'US',
@@ -70,7 +70,7 @@ export default function RootLayout({
     "@type": "WebApplication",
     "name": "reeldropnow",
     "alternateName": ["ReelDrop", "ReelDropNow", "Instagram Reels Downloader"],
-    "url": "https://reeldrop.duckdns.org",
+    "url": "https://reeldropnow.com",
     "description": "Download Instagram Reels Video online to your device. Free, fast and high-speed MP4 downloads.",
     "applicationCategory": "MultimediaApplication",
     "operatingSystem": "All",

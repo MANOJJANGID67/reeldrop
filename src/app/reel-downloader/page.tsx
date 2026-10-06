@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Reel Downloader Online | REELDROP',
   description: 'Download supported public Instagram Reels with our online Reel Downloader. No installation required.',
-  alternates: { canonical: 'https://www.reeldrop.com/reel-downloader' }
+  alternates: { canonical: 'https://reeldropnow.com/reel-downloader' }
 };
 
 export default function Page() {

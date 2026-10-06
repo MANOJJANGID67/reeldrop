@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service | REELDROP',
   description: 'REELDROP terms of service and usage conditions.',
-  alternates: { canonical: 'https://www.reeldrop.com/terms' }
+  alternates: { canonical: 'https://reeldropnow.com/terms' }
 };
 
 export default function Terms() {

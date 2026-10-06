@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Instagram Reel Downloader for Android | REELDROP',
   description: 'Download Instagram Reels directly to your Android device using REELDROP.',
-  alternates: { canonical: 'https://www.reeldrop.com/guides/instagram-reel-downloader-android' }
+  alternates: { canonical: 'https://reeldropnow.com/guides/instagram-reel-downloader-android' }
 };
 
 export default function Page() {

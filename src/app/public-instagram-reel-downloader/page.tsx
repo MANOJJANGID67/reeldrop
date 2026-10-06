@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Public Instagram Reel Downloader | REELDROP',
   description: 'Securely download public Instagram Reels without bypassing authentication or privacy restrictions.',
-  alternates: { canonical: 'https://www.reeldrop.com/public-instagram-reel-downloader' }
+  alternates: { canonical: 'https://reeldropnow.com/public-instagram-reel-downloader' }
 };
 
 export default function Page() {
