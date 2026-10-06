@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Inter } from 'next/font/google';
 import './globals.css';
 
@@ -54,6 +55,17 @@ export const metadata: Metadata = {
   },
   verification: {
     google: 'googlede2c616247bee979',
+  },
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: 'any', type: 'image/png' },
+      { url: '/logo.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+    shortcut: '/icon.png',
   },
   other: {
     'geo.region': 'US',
@@ -128,6 +140,37 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        <header className="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 transition-all">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <Link href="/" className="flex items-center gap-2.5 group">
+              <img 
+                src="/logo.svg" 
+                alt="reeldropnow logo" 
+                className="w-9 h-9 rounded-xl shadow-xs group-hover:scale-105 transition-transform" 
+              />
+              <span className="font-black text-xl tracking-tight text-gray-900">
+                reeldrop<span className="text-indigo-600">now</span>
+              </span>
+            </Link>
+            <nav className="flex items-center gap-5 text-sm font-medium text-gray-600">
+              <Link href="/instagram-reel-downloader" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+                Reels
+              </Link>
+              <Link href="/instagram-video-downloader" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+                Videos
+              </Link>
+              <Link href="/guides/how-to-download-instagram-reels" className="hover:text-indigo-600 transition-colors">
+                Guide
+              </Link>
+              <Link 
+                href="/" 
+                className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition-colors shadow-xs"
+              >
+                Download Now
+              </Link>
+            </nav>
+          </div>
+        </header>
         <main className="min-h-[calc(100vh-200px)]">
           {children}
         </main>
@@ -135,7 +178,10 @@ export default function RootLayout({
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
-                <h3 className="font-bold text-gray-900 mb-4">reeldropnow</h3>
+                <div className="flex items-center gap-2 mb-4">
+                  <img src="/logo.svg" alt="reeldropnow logo" className="w-6 h-6 rounded-lg" />
+                  <h3 className="font-bold text-gray-900 text-base">reeldrop<span className="text-indigo-600">now</span></h3>
+                </div>
                 <p className="text-xs text-gray-500 mb-4">Download Instagram Reels Video online to your device effortlessly.</p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li><a href="/" className="hover:text-indigo-600">Home</a></li>
