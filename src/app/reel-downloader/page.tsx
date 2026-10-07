@@ -27,19 +27,19 @@ export default function Page() {
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Core Benefits of Our Online Reel Downloader</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-6">
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">🚀 Fast Edge Downloads</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">🚀 Fast Edge Downloads</h3>
               <p className="text-xs text-gray-600">Enjoy rapid download speeds through Cloudflare edge servers located in over 300 cities.</p>
             </div>
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">✨ Clean, Ad-Light Experience</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">✨ Clean, Ad-Light Experience</h3>
               <p className="text-xs text-gray-600">No shady betting pop-ups, misleading download buttons, or deceptive malware redirects.</p>
             </div>
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">📱 Fully Mobile Friendly</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">📱 Fully Mobile Friendly</h3>
               <p className="text-xs text-gray-600">Optimized layout that runs smoothly on iOS Safari, Android Chrome, and mobile browsers.</p>
             </div>
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">💯 Always 100% Free</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">💯 Always 100% Free</h3>
               <p className="text-xs text-gray-600">No premium paywalls, no monthly subscription fees, and no artificial daily download caps.</p>
             </div>
           </div>

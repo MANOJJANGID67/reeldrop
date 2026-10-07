@@ -33,7 +33,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">1</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Copy Link in Instagram App</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Copy Link in Instagram App</h3>
               <p className="text-sm text-gray-600">
                 While watching the Reel on your iPhone, tap the <strong>Share</strong> icon (paper airplane) at the bottom right. 
                 Tap <strong>&quot;Copy Link&quot;</strong>.
@@ -44,7 +44,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">2</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Open Safari &amp; Visit reeldropnow</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Open Safari &amp; Visit reeldropnow</h3>
               <p className="text-sm text-gray-600">
                 Open Safari, go to <Link href="/" className="text-indigo-600 underline font-semibold">reeldropnow.com</Link>, 
                 paste the URL into the input field, and tap <strong>&quot;Download Media&quot;</strong>.
@@ -55,7 +55,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">3</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Confirm Safari Download Prompt</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Confirm Safari Download Prompt</h3>
               <p className="text-sm text-gray-600">
                 Safari will show a popup asking <em>&quot;Do you want to download this file?&quot;</em>. Tap <strong>Download</strong>. 
                 A small downward arrow icon will appear in your Safari search bar showing the progress.
@@ -66,7 +66,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">4</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Move Video to iPhone Camera Roll</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Move Video to iPhone Camera Roll</h3>
               <p className="text-sm text-gray-600">
                 Tap the Safari Download icon, tap the downloaded video, tap the iOS <strong>Share</strong> button at the bottom left, 
                 and select <strong>&quot;Save Video&quot;</strong>. The Reel is now permanently saved in your iPhone Photos app!

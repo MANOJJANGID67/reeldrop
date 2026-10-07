@@ -30,15 +30,15 @@ export default function Page() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose mb-6">
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">📹 Standard Feed Videos</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">📹 Standard Feed Videos</h3>
               <p className="text-xs text-gray-600">Square (1:1) and horizontal (16:9) video posts shared on profile grids.</p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">🎬 Instagram Reels</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">🎬 Instagram Reels</h3>
               <p className="text-xs text-gray-600">Full-length 9:16 vertical short videos in crisp 1080p resolution.</p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">🎞️ Multi-Clip Posts</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">🎞️ Multi-Clip Posts</h3>
               <p className="text-xs text-gray-600">Public carousel sliders containing standalone video segments.</p>
             </div>
           </div>

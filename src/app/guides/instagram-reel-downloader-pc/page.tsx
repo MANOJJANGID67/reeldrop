@@ -32,7 +32,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">1</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Copy URL in Desktop Browser</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Copy URL in Desktop Browser</h3>
               <p className="text-sm text-gray-600">
                 Open Instagram in your web browser (Chrome, Edge, Firefox, or Safari). Open the Reel and copy the URL from your 
                 browser&apos;s address bar, or click the three dots icon (&hellip;) and select <strong>&quot;Copy link&quot;</strong>.
@@ -43,7 +43,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">2</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Navigate to reeldropnow</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Navigate to reeldropnow</h3>
               <p className="text-sm text-gray-600">
                 Go to <Link href="/" className="text-indigo-600 underline font-semibold">reeldropnow.com</Link> in a new browser tab. 
                 Paste the copied link (<kbd className="bg-gray-200 px-1.5 py-0.5 rounded text-xs">Ctrl + V</kbd> on Windows or <kbd className="bg-gray-200 px-1.5 py-0.5 rounded text-xs">Cmd + V</kbd> on Mac).
@@ -54,7 +54,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">3</div>
             <div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Save MP4 Directly to Downloads Folder</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Save MP4 Directly to Downloads Folder</h3>
               <p className="text-sm text-gray-600">
                 Click <strong>&quot;Download Media&quot;</strong>. Your browser will immediately download the high-definition MP4 file into your 
                 designated Downloads folder, ready for editing in Premiere Pro, Final Cut, DaVinci Resolve, or CapCut.

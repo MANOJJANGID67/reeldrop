@@ -28,17 +28,17 @@ export default function Page() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 not-prose mb-6">
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs">
               <div className="w-10 h-10 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center font-bold text-lg mb-3">🎬</div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">True 1080p Resolution</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">True 1080p Resolution</h3>
               <p className="text-xs text-gray-600">Extracts the direct MP4 stream as uploaded by the creator with sharp visuals and vibrant colors.</p>
             </div>
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs">
               <div className="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center font-bold text-lg mb-3">🎵</div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Original Audio Intact</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Original Audio Intact</h3>
               <p className="text-xs text-gray-600">Keeps original dialogue, background tracks, and licensed music perfectly synchronized.</p>
             </div>
             <div className="bg-white p-6 rounded-2xl border border-gray-100 shadow-xs">
               <div className="w-10 h-10 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center font-bold text-lg mb-3">🚫</div>
-              <h4 className="font-bold text-gray-900 text-base mb-1">Zero Watermarks</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">Zero Watermarks</h3>
               <p className="text-xs text-gray-600">Downloads clean video files without added company logos, banners, or visual stamps.</p>
             </div>
           </div>

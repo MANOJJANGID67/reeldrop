@@ -21,7 +21,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <div className="bg-indigo-50/50 p-6 rounded-xl border border-indigo-100">
-            <h4 className="font-bold text-gray-900 text-lg mb-2">📬 General Support &amp; Feedback</h4>
+            <h3 className="font-bold text-gray-900 text-lg mb-2">📬 General Support &amp; Feedback</h3>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
               Have questions about saving videos, browser compatibility, or feature suggestions? Send us an email and our support crew will get back to you.
             </p>
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
 
           <div className="bg-amber-50/50 p-6 rounded-xl border border-amber-100">
-            <h4 className="font-bold text-gray-900 text-lg mb-2">⚖️ Legal, Copyright &amp; DMCA</h4>
+            <h3 className="font-bold text-gray-900 text-lg mb-2">⚖️ Legal, Copyright &amp; DMCA</h3>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
               For copyright inquiries, content takedown requests, or terms compliance notices, please contact our designated legal agent directly.
             </p>

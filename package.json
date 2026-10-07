@@ -8,7 +8,8 @@
         "start": "next start",
         "lint": "eslint",
         "seo:audit": "node seo-audit.js",
-        "pages:build": "npx --legacy-peer-deps @cloudflare/next-on-pages@1"
+        "postbuild": "node scripts/copy-headers.js",
+        "pages:build": "npx --legacy-peer-deps @cloudflare/next-on-pages@1 && node scripts/copy-headers.js"
     },
     "dependencies": {
         "axios": "^1.20.0",

@@ -32,15 +32,15 @@ export default function Page() {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose mb-6">
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">🛡️ No Login Required</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">🛡️ No Login Required</h3>
               <p className="text-xs text-gray-600">You never need to log into Instagram or share two-factor codes with us.</p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">🚫 No Private Access</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">🚫 No Private Access</h3>
               <p className="text-xs text-gray-600">We do not bypass privacy controls or scrape locked accounts.</p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h4 className="font-bold text-gray-900 text-base mb-1">⚡ Direct MP4 Stream</h4>
+              <h3 className="font-bold text-gray-900 text-base mb-1">⚡ Direct MP4 Stream</h3>
               <p className="text-xs text-gray-600">Downloads the direct public stream in full 1080p resolution.</p>
             </div>
           </div>

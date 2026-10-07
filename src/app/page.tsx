@@ -173,6 +173,28 @@ export default function Home() {
       
       {/* Informative Content & AEO/GEO Blocks */}
       <div className="w-full max-w-4xl mt-16 px-4 space-y-12">
+        {/* How It Works (AEO Optimized) */}
+        <section className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How to Download Instagram Reels with reeldropnow</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
+              <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">1</div>
+              <h3 className="font-bold text-gray-900 mb-1">Copy Reel Link</h3>
+              <p className="text-xs text-gray-600">Open Instagram, choose the public Reel you want, click Share, and copy the link.</p>
+            </div>
+            <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
+              <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">2</div>
+              <h3 className="font-bold text-gray-900 mb-1">Paste in reeldropnow</h3>
+              <p className="text-xs text-gray-600">Paste the URL into the input field above and click &quot;Download Media&quot;.</p>
+            </div>
+            <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
+              <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">3</div>
+              <h3 className="font-bold text-gray-900 mb-1">Save to Device</h3>
+              <p className="text-xs text-gray-600">Your MP4 video begins saving straight into your mobile or computer Downloads folder.</p>
+            </div>
+          </div>
+        </section>
+
         {/* Pricing & Limits Section */}
         <section className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
           <div className="flex items-center space-x-3 mb-4">
@@ -250,28 +272,6 @@ export default function Home() {
             <Link href="/dmca" className="underline hover:text-amber-950 font-bold">DMCA Copyright Policy</Link>
             <Link href="/terms" className="underline hover:text-amber-950 font-bold">Terms of Service</Link>
             <Link href="/privacy" className="underline hover:text-amber-950 font-bold">Privacy Policy</Link>
-          </div>
-        </section>
-
-        {/* How It Works (AEO Optimized) */}
-        <section className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">How to Download Instagram Reels with reeldropnow</h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-              <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">1</div>
-              <h4 className="font-bold text-gray-900 mb-1">Copy Reel Link</h4>
-              <p className="text-xs text-gray-600">Open Instagram, choose the public Reel you want, click Share, and copy the link.</p>
-            </div>
-            <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-              <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">2</div>
-              <h4 className="font-bold text-gray-900 mb-1">Paste in reeldropnow</h4>
-              <p className="text-xs text-gray-600">Paste the URL into the input field above and click &quot;Download Media&quot;.</p>
-            </div>
-            <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
-              <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">3</div>
-              <h4 className="font-bold text-gray-900 mb-1">Save to Device</h4>
-              <p className="text-xs text-gray-600">Your MP4 video begins saving straight into your mobile or computer Downloads folder.</p>
-            </div>
           </div>
         </section>
 
