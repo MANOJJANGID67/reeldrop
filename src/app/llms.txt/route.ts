@@ -41,12 +41,18 @@ const llmsContent = `# reeldropnow
 - [Instagram Follower Tracker Tools Compared](https://reeldropnow.com/blog/instagram-follower-tracker-tools-compared): Tracking tool evaluation and security risks.
 - [Snoopreport Review & Alternatives](https://reeldropnow.com/blog/snoopreport-review-legit-alternatives): Comprehensive evaluation of Instagram activity tracking.
 
-## Utility Endpoints & Alternate Keywords
-- [Instagram Reel Downloader](https://reeldropnow.com/instagram-reel-downloader): Dedicated tool endpoint for saving Instagram Reels.
-- [Instagram Video Downloader](https://reeldropnow.com/instagram-video-downloader): Dedicated tool endpoint for saving Instagram feed videos.
-- [Public Instagram Reel Downloader](https://reeldropnow.com/public-instagram-reel-downloader): Public-only extraction pipeline.
-- [Reel Downloader Online](https://reeldropnow.com/reel-downloader): Online browser extraction tool without software installation.
-- [Download Instagram Reels](https://reeldropnow.com/download-instagram-reels): High-speed media extraction interface.
+## Primary Downloader Tools
+- [Instagram Reel Downloader](https://reeldropnow.com/instagram-reel-downloader): Dedicated high-speed tool for downloading public Instagram Reels in original 1080p MP4.
+- [Instagram Story Downloader](https://reeldropnow.com/instagram-story-downloader): Safe tool for saving active 24-hour public Instagram Stories and Highlights.
+- [Instagram Video Downloader](https://reeldropnow.com/instagram-video-downloader): Dedicated tool for downloading Instagram feed videos, timeline clips, and carousels.
+- [Facebook Reel Downloader](https://reeldropnow.com/facebook-reel-downloader): Independent tool for saving public Facebook Reels and video clips.
+
+## Supporting Guides & Quality Analysis
+- [Download Reels in 4K: Facts & Limits](https://reeldropnow.com/blog/download-instagram-reels-in-4k): Detailed analysis of Instagram compression, resolution limits, and source quality.
+- [Download Reels to Camera Roll](https://reeldropnow.com/blog/download-instagram-reels-to-camera-roll): Instructions for saving Reels directly into iOS Photos and Android Gallery.
+- [Download Reels Without Watermark](https://reeldropnow.com/blog/download-instagram-reels-without-watermark): Saving clean video streams without added platform logos.
+- [Instagram Reels to MP4](https://reeldropnow.com/blog/instagram-reels-to-mp4): Technical codec parameters and MP4 conversion.
+- [Reel Download Not Working Troubleshooting](https://reeldropnow.com/blog/instagram-reel-download-not-working): Complete diagnostic checklist for fixing failed downloads.
 
 ## Optional
 - [Full LLM Context](https://reeldropnow.com/llms-full.txt): Complete, concatenated site documentation and user guides for comprehensive model ingestion.

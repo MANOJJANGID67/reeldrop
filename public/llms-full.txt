@@ -1,4 +1,4 @@
-# reeldropnow - Full Documentation & Service Information
+`# reeldropnow - Full Documentation & Service Information
 
 > reeldropnow is an independent, free, web-based media utility designed to extract and download public Instagram Reels, videos, and stereo audio streams in original 1080p MP4 quality without software installation, registration, or watermarks.
 
@@ -28,10 +28,12 @@ Edge hosting and proxy bandwidth expenses are funded entirely through transparen
 reeldropnow holds a 4.9 out of 5.0 satisfaction score based on verified user reviews from digital marketers, content creators, researchers, and video editors worldwide. URL: https://reeldropnow.com/reviews
 
 ## How It Works (Step-by-Step)
-1. **Find Content**: In the Instagram app or browser, find the public Reel or video you wish to save.
-2. **Copy Link**: Tap the Share icon and choose "Copy Link".
-3. **Paste & Download**: Navigate to https://reeldropnow.com, paste the URL into the input field, and tap "Download Media".
-4. **Save**: The clean MP4 video file saves directly into the device's downloads folder or camera roll.
+1. Copy the target public Instagram Reel or video URL.
+2. Navigate to https://reeldropnow.com.
+3. Paste the URL into the input search field.
+4. Click 'Download Media'.
+5. Save the uncompressed MP4 video directly to device storage.
 
-## Legal, Copyright & DMCA Notice
-reeldropnow respects all copyright and intellectual property rights. Users must only download content that they own, have explicit permission to save, or that is released under a permissive Creative Commons license. To submit a DMCA copyright takedown request, email dmca@reeldropnow.com. URL: https://reeldropnow.com/dmca
+## Legal & DMCA Compliance
+reeldropnow is fully committed to intellectual property protections. The platform operates in compliance with the Digital Millennium Copyright Act (DMCA). Content owners can submit takedown notices via dmca@reeldropnow.com. URL: https://reeldropnow.com/dmca
+`

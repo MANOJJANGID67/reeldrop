@@ -96,13 +96,6 @@ export default function RootLayout({
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "1280",
-      "bestRating": "5",
-      "worstRating": "1"
     }
   };
 
@@ -186,33 +179,30 @@ export default function RootLayout({
                 reeldrop<span className="text-indigo-600">now</span>
               </span>
             </Link>
-            <nav className="flex items-center gap-5 text-sm font-medium text-gray-600">
-              <Link href="/services" className="hover:text-indigo-600 transition-colors hidden lg:inline-block">
-                Services
+            <nav className="flex items-center gap-3 sm:gap-4 md:gap-5 text-sm font-medium text-gray-600">
+              <Link href="/instagram-reel-downloader" className="hover:text-indigo-600 transition-colors">
+                Reels
               </Link>
-              <Link href="/pricing" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
-                Pricing
+              <Link href="/instagram-story-downloader" className="hover:text-indigo-600 transition-colors">
+                Stories
+              </Link>
+              <Link href="/instagram-video-downloader" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
+                Videos
+              </Link>
+              <Link href="/facebook-reel-downloader" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
+                FB Reels
               </Link>
               <Link href="/blog" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
                 Blog
               </Link>
-              <Link href="/faq" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
+              <Link href="/faq" className="hover:text-indigo-600 transition-colors hidden lg:inline-block">
                 FAQ
               </Link>
-              <Link href="/reviews" className="hover:text-indigo-600 transition-colors hidden lg:inline-block">
-                Reviews
-              </Link>
-              <Link href="/about" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
-                About
-              </Link>
-              <Link href="/contact" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
-                Contact
-              </Link>
               <Link 
-                href="/" 
-                className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-3.5 py-2 rounded-xl transition-colors shadow-xs"
+                href="/instagram-reel-downloader" 
+                className="bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-bold px-3 py-2 rounded-xl transition-colors shadow-xs shrink-0"
               >
-                Download Now
+                Download Tool
               </Link>
             </nav>
           </div>
@@ -240,11 +230,11 @@ export default function RootLayout({
               <div>
                 <h3 className="font-bold text-gray-900 mb-4">Popular Tools</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li><Link href="/instagram-reel-downloader" className="hover:text-indigo-600">Instagram Reel Downloader</Link></li>
-                  <li><Link href="/reel-downloader" className="hover:text-indigo-600">Reel Downloader</Link></li>
-                  <li><Link href="/instagram-video-downloader" className="hover:text-indigo-600">Instagram Video Downloader</Link></li>
-                  <li><Link href="/download-instagram-reels" className="hover:text-indigo-600">Download Instagram Reels</Link></li>
-                  <li><Link href="/public-instagram-reel-downloader" className="hover:text-indigo-600">Public Reel Downloader</Link></li>
+                  <li><Link href="/instagram-reel-downloader" className="hover:text-indigo-600 font-medium">Instagram Reel Downloader</Link></li>
+                  <li><Link href="/instagram-story-downloader" className="hover:text-indigo-600 font-medium">Instagram Story Downloader</Link></li>
+                  <li><Link href="/instagram-video-downloader" className="hover:text-indigo-600 font-medium">Instagram Video Downloader</Link></li>
+                  <li><Link href="/facebook-reel-downloader" className="hover:text-indigo-600 font-medium">Facebook Reel Downloader</Link></li>
+                  <li><Link href="/blog/download-instagram-reels-in-4k" className="hover:text-indigo-600">4K Reels Quality Guide</Link></li>
                 </ul>
               </div>
               <div>

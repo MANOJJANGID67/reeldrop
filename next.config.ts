@@ -17,6 +17,63 @@ const nextConfig: NextConfig = {
         destination: 'https://reeldropnow.com/:path*',
         permanent: true,
       },
+      // Consolidate duplicate landing pages to primary /instagram-reel-downloader
+      {
+        source: '/download-instagram-reels',
+        destination: '/instagram-reel-downloader',
+        permanent: true,
+      },
+      {
+        source: '/public-instagram-reel-downloader',
+        destination: '/instagram-reel-downloader',
+        permanent: true,
+      },
+      {
+        source: '/reel-downloader',
+        destination: '/instagram-reel-downloader',
+        permanent: true,
+      },
+      // Consolidate competing blog URLs to canonical guides or tools
+      {
+        source: '/blog/how-to-download-instagram-reels',
+        destination: '/guides/how-to-download-instagram-reels',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-download-instagram-reels-on-iphone',
+        destination: '/guides/instagram-reel-downloader-iphone',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-download-instagram-reels-on-android',
+        destination: '/guides/instagram-reel-downloader-android',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-download-instagram-stories',
+        destination: '/instagram-story-downloader',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-download-instagram-story-on-iphone',
+        destination: '/instagram-story-downloader',
+        permanent: true,
+      },
+      {
+        source: '/blog/how-to-download-instagram-story-on-android',
+        destination: '/instagram-story-downloader',
+        permanent: true,
+      },
+      {
+        source: '/blog/instagram-reels-to-mp3',
+        destination: '/blog/instagram-reels-to-mp3-download-audio',
+        permanent: true,
+      },
+      {
+        source: '/blog/download-instagram-story-without-screenshot',
+        destination: '/blog/how-to-download-instagram-stories-without-screenshots',
+        permanent: true,
+      },
     ];
   },
   async headers() {

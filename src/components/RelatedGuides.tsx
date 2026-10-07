@@ -79,13 +79,13 @@ export default function RelatedGuides({ currentSlug }: RelatedGuidesProps) {
       </div>
 
       <div className="bg-white p-5 rounded-xl border border-gray-100 flex flex-wrap items-center justify-between gap-4 text-xs font-semibold">
-        <span className="text-gray-500">More Platform Resources:</span>
+        <span className="text-gray-500">Popular Tools:</span>
         <div className="flex flex-wrap gap-4 text-indigo-600">
-          <Link href="/services" className="hover:underline">Media Services Suite &rarr;</Link>
-          <Link href="/pricing" className="hover:underline">100% Free Pricing &rarr;</Link>
-          <Link href="/reviews" className="hover:underline">User Reviews (4.9★) &rarr;</Link>
+          <Link href="/instagram-reel-downloader" className="hover:underline">Reel Downloader &rarr;</Link>
+          <Link href="/instagram-story-downloader" className="hover:underline">Story Downloader &rarr;</Link>
+          <Link href="/instagram-video-downloader" className="hover:underline">Video Downloader &rarr;</Link>
+          <Link href="/facebook-reel-downloader" className="hover:underline">Facebook Reels &rarr;</Link>
           <Link href="/faq" className="hover:underline">Help &amp; FAQ Center &rarr;</Link>
-          <Link href="/contact" className="hover:underline">Contact Support &rarr;</Link>
         </div>
       </div>
     </section>

@@ -15,9 +15,33 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json().catch(() => null);
-    if (!body || typeof body.url !== 'string' || !body.url.startsWith('https://www.instagram.com/')) {
+    if (!body || typeof body.url !== 'string') {
       return NextResponse.json(
-        { error: 'Invalid URL. Must be a valid Instagram URL starting with https://www.instagram.com/' },
+        { error: 'Missing or invalid URL parameter.' },
+        { status: 400 }
+      );
+    }
+
+    const trimmedUrl = body.url.trim();
+    let isSupported = false;
+    try {
+      const parsed = new URL(trimmedUrl);
+      const host = parsed.hostname.toLowerCase();
+      isSupported = (
+        host === 'instagram.com' ||
+        host.endsWith('.instagram.com') ||
+        host === 'facebook.com' ||
+        host.endsWith('.facebook.com') ||
+        host === 'fb.watch' ||
+        host.endsWith('.fb.watch')
+      );
+    } catch {
+      isSupported = false;
+    }
+
+    if (!isSupported) {
+      return NextResponse.json(
+        { error: 'Invalid URL. Please provide a valid public Instagram or Facebook link.' },
         { status: 400 }
       );
     }

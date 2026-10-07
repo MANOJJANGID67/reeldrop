@@ -145,8 +145,25 @@ export default function Home() {
           </div>
         )}
 
+        {/* Direct Tool Links */}
+        <div className="mt-6 pt-4 border-t border-gray-100 flex flex-wrap items-center justify-center gap-2 text-xs font-semibold">
+          <span className="text-gray-500 mr-1">Direct Tools:</span>
+          <Link href="/instagram-reel-downloader" className="px-3 py-1.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-lg transition-colors">
+            Reel Downloader
+          </Link>
+          <Link href="/instagram-story-downloader" className="px-3 py-1.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-lg transition-colors">
+            Story Downloader
+          </Link>
+          <Link href="/instagram-video-downloader" className="px-3 py-1.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-lg transition-colors">
+            Video Downloader
+          </Link>
+          <Link href="/facebook-reel-downloader" className="px-3 py-1.5 bg-indigo-50 text-indigo-700 hover:bg-indigo-100 rounded-lg transition-colors">
+            Facebook Reels
+          </Link>
+        </div>
+
         {/* Feature badges */}
-        <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-gray-100 text-center">
+        <div className="grid grid-cols-3 gap-4 mt-6 text-center">
           <div className="p-3 bg-gray-50 rounded-xl">
             <p className="text-xs font-bold text-gray-800">100% Free</p>
             <p className="text-[11px] text-gray-500 mt-0.5">No subscription fees</p>

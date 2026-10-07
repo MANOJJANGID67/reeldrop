@@ -1,89 +1,197 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import MediaDownloader from '@/components/MediaDownloader';
 
 export const metadata: Metadata = {
-  title: 'Instagram Video Downloader Online | reeldropnow',
-  description: 'Download public Instagram videos and posts using our fast, secure, online extraction tool. Save high quality MP4 videos with stereo sound.',
+  title: 'Instagram Video Downloader - Save IG Videos in HD',
+  description: 'Download Instagram videos, reels, and clips in original 1080p MP4. Fast, secure online tool with no software installation.',
   alternates: { canonical: 'https://reeldropnow.com/instagram-video-downloader' }
 };
 
-export default function Page() {
+const faqs = [
+  {
+    q: 'What types of Instagram videos can I download?',
+    a: 'You can download all public Instagram video content, including vertical Reels, standard timeline feed videos, and carousel video clips.'
+  },
+  {
+    q: 'How are Instagram Reels different from standard Instagram feed videos?',
+    a: 'Reels are 9:16 vertical short-form videos designed for mobile discovery. Feed videos can be square (1:1), landscape (16:9), or portrait (4:5). Our tool automatically detects the aspect ratio and saves the exact source file.'
+  },
+  {
+    q: 'Do I need to pay or install an app to download videos?',
+    a: 'No. reeldropnow is completely free and works directly inside your mobile or desktop web browser without software downloads or subscriptions.'
+  },
+  {
+    q: 'What video quality will my file be saved in?',
+    a: 'Videos are saved in the maximum resolution provided by Instagram, typically up to 1080p Full HD at high bitrates with stereo audio.'
+  }
+];
+
+export default function InstagramVideoDownloaderPage() {
+  const jsonLdApp = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: 'reeldropnow Instagram Video Downloader',
+    url: 'https://reeldropnow.com/instagram-video-downloader',
+    applicationCategory: 'MultimediaApplication',
+    operatingSystem: 'iOS, Android, Windows, macOS, Linux',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD'
+    },
+    description: 'Free online tool to download Instagram videos, reels, and clips.'
+  };
+
+  const jsonLdFaq = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a
+      }
+    }))
+  };
+
+  const jsonLdBreadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://reeldropnow.com/'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Instagram Video Downloader',
+        item: 'https://reeldropnow.com/instagram-video-downloader'
+      }
+    ]
+  };
+
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8 text-gray-800">
-      <nav className="text-xs text-gray-500 mb-6">
-        <Link href="/" className="hover:text-indigo-600">Home</Link> &gt; <span className="text-gray-700">Instagram Video Downloader</span>
+    <div className="max-w-4xl mx-auto py-10 px-4 sm:px-6 lg:px-8 text-gray-800">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdApp) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdBreadcrumbs) }} />
+
+      <nav className="text-xs text-gray-500 mb-6" aria-label="Breadcrumb">
+        <Link href="/" className="hover:text-indigo-600">Home</Link>
+        <span className="mx-2">&gt;</span>
+        <span className="text-gray-700 font-medium">Instagram Video Downloader</span>
       </nav>
 
-      <h1 className="text-3xl sm:text-4xl font-extrabold mb-4 text-gray-900">
-        Instagram Video Downloader Online
-      </h1>
-      <p className="text-base text-gray-600 mb-8 leading-relaxed">
-        Looking to download standard Instagram feed posts, long-form videos, or multi-clip carousels? 
-        reeldropnow provides a clean, fast, and completely free web utility to save public Instagram videos directly in high-definition MP4 format.
-      </p>
+      <header className="text-center max-w-2xl mx-auto mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-3">
+          Free Online Instagram Video Downloader
+        </h1>
+        <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+          Save public Instagram videos, timeline posts, and video clips in 1080p MP4. Fast cloud processing with zero compression loss.
+        </p>
+      </header>
 
-      <div className="space-y-8 text-gray-700 text-sm sm:text-base leading-relaxed">
-        <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Supported Video Content on Instagram</h2>
-          <p className="mb-4">
-            Instagram offers multiple video formats across its platform. Our tool handles them smoothly:
+      {/* Downloader is immediately visible above the fold */}
+      <MediaDownloader
+        serviceType="video"
+        defaultPlaceholder="Paste Instagram Video or Post link here (https://www.instagram.com/p/...)"
+        buttonText="Download Instagram Video"
+        badgeText="Video Downloader • All Formats"
+      />
+
+      <article className="mt-12 space-y-10">
+        <section>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Understanding Instagram Video Formats and Download Options
+          </h2>
+
+          <h3 className="text-lg font-bold text-gray-900 mb-3">
+            Reels vs. Stories vs. Feed Videos: How They Differ
+          </h3>
+          <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+            Instagram organizes video content into distinct categories, each serving a different purpose and format:
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h3 className="font-bold text-gray-900 text-base mb-1">📹 Standard Feed Videos</h3>
-              <p className="text-xs text-gray-600">Square (1:1) and horizontal (16:9) video posts shared on profile grids.</p>
+              <span className="text-2xl block mb-2">🎬</span>
+              <h4 className="font-bold text-gray-900 text-sm mb-1">Instagram Reels</h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Vertical 9:16 videos up to 90 seconds. Ideal for quick mobile viewing. Check our dedicated <Link href="/instagram-reel-downloader" className="text-indigo-600 underline font-semibold">Reel Downloader</Link> for specialized short-form saving.
+              </p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h3 className="font-bold text-gray-900 text-base mb-1">🎬 Instagram Reels</h3>
-              <p className="text-xs text-gray-600">Full-length 9:16 vertical short videos in crisp 1080p resolution.</p>
+              <span className="text-2xl block mb-2">⏱️</span>
+              <h4 className="font-bold text-gray-900 text-sm mb-1">Instagram Stories</h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Ephemeral 24-hour visual moments. Can be archived through our dedicated <Link href="/instagram-story-downloader" className="text-indigo-600 underline font-semibold">Story Downloader</Link> while still active.
+              </p>
             </div>
             <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-xs">
-              <h3 className="font-bold text-gray-900 text-base mb-1">🎞️ Multi-Clip Posts</h3>
-              <p className="text-xs text-gray-600">Public carousel sliders containing standalone video segments.</p>
+              <span className="text-2xl block mb-2">📹</span>
+              <h4 className="font-bold text-gray-900 text-sm mb-1">Feed Posts &amp; Clips</h4>
+              <p className="text-xs text-gray-600 leading-relaxed">
+                Permanent grid videos in square (1:1), portrait (4:5), or landscape (16:9) aspect ratios. Fully supported by this tool.
+              </p>
             </div>
           </div>
-        </div>
 
-        <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">How to Download Instagram Videos</h3>
-          <ol className="list-decimal pl-6 space-y-2 text-gray-700">
-            <li><strong>Copy Video Link:</strong> Find any public Instagram video post, click the three dots (&hellip;) or Share icon, and select &quot;Copy Link&quot;.</li>
-            <li><strong>Paste on reeldropnow:</strong> Go to our <Link href="/" className="text-indigo-600 font-semibold underline">Main Downloader</Link> and paste the URL into the input field.</li>
-            <li><strong>Save MP4 File:</strong> Hit &quot;Download Media&quot; and your clean video file begins downloading directly to your device storage.</li>
+          <h3 className="text-lg font-bold text-gray-900 mb-3">
+            How to Download Any Instagram Video
+          </h3>
+          <ol className="list-decimal pl-6 space-y-2 text-xs sm:text-sm text-gray-600 mb-8">
+            <li><strong>Copy Video URL:</strong> Tap the share button on the Instagram post and select &quot;Copy Link&quot;.</li>
+            <li><strong>Paste Link:</strong> Enter the copied URL into the search box above.</li>
+            <li><strong>Save Video:</strong> Click &quot;Download Instagram Video&quot; to initiate the high-speed MP4 download.</li>
           </ol>
-        </div>
 
-        <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">Why reeldropnow Is Better than Traditional Apps</h3>
-          <p>
-            Most video downloader apps demand intrusive permissions, collect tracking telemetry, or bombard you with pop-up advertisements. 
-            reeldropnow works 100% within your web browser. No apps, no APK downloads, and no personal registrations required.
+          <h3 className="text-lg font-bold text-gray-900 mb-3">
+            Device Compatibility and Browser Support
+          </h3>
+          <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+            reeldropnow is engineered for universal compatibility across desktop and mobile platforms:
           </p>
-        </div>
+          <ul className="list-disc pl-6 space-y-2 text-xs sm:text-sm text-gray-600 mb-8">
+            <li><strong>Apple iOS:</strong> Works directly in Safari on iPhone and iPad. Downloaded MP4s can be saved to the Photos app with one tap.</li>
+            <li><strong>Google Android:</strong> Fully compatible with Chrome, Firefox, and Samsung Internet. Saves to your internal Download folder.</li>
+            <li><strong>Desktop:</strong> Supports Windows, macOS, and Linux across all modern browsers.</li>
+          </ul>
 
-        <div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-3">Respecting Content Creators</h3>
-          <p>
-            All media downloaded through reeldropnow should be used responsibly for offline personal enjoyment, study, or fair use. 
-            Always ask for permission before reusing or reposting someone else&apos;s creative content.
-          </p>
-        </div>
-      </div>
+          <h3 className="text-lg font-bold text-gray-900 mb-3">
+            Frequently Asked Questions
+          </h3>
+          <div className="space-y-3 mb-8">
+            {faqs.map((f, i) => (
+              <div key={i} className="p-4 bg-gray-50 rounded-xl border border-gray-100">
+                <h4 className="font-bold text-gray-900 text-sm mb-1">{f.q}</h4>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{f.a}</p>
+              </div>
+            ))}
+          </div>
 
-      <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">Ready to Save Your Instagram Video?</h3>
-        <p className="text-sm text-gray-600 mb-6">Fast, unlimited, and free high-definition video downloading in one click.</p>
-        <Link href="/" className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-colors">
-          Download Instagram Video Now
-        </Link>
-      </div>
-
-      <div className="mt-8 pt-6 border-t border-gray-100 flex flex-wrap justify-center gap-4 text-xs font-semibold text-indigo-600">
-        <Link href="/services" className="hover:underline">Explore Services &rarr;</Link>
-        <Link href="/guides/instagram-video-download-guide" className="hover:underline">Video Technical Guide &rarr;</Link>
-        <Link href="/pricing" className="hover:underline">Free Pricing Model &rarr;</Link>
-        <Link href="/faq" className="hover:underline">Help &amp; FAQ Center &rarr;</Link>
-      </div>
+          <h3 className="text-lg font-bold text-gray-900 mb-3">
+            Related Video Resources
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <Link href="/instagram-reel-downloader" className="p-3 bg-white rounded-xl border border-gray-200 hover:border-indigo-500 transition-colors">
+              <span className="font-bold text-indigo-600 block mb-1">Reels Tool</span>
+              <span className="text-gray-800">Specialized high-speed Instagram Reel downloader.</span>
+            </Link>
+            <Link href="/instagram-story-downloader" className="p-3 bg-white rounded-xl border border-gray-200 hover:border-indigo-500 transition-colors">
+              <span className="font-bold text-indigo-600 block mb-1">Stories Tool</span>
+              <span className="text-gray-800">Save public Stories and Highlights safely.</span>
+            </Link>
+            <Link href="/guides/instagram-video-download-guide" className="p-3 bg-white rounded-xl border border-gray-200 hover:border-indigo-500 transition-colors">
+              <span className="font-bold text-indigo-600 block mb-1">Video Guide</span>
+              <span className="text-gray-800">Complete manual on video formats and encoding.</span>
+            </Link>
+          </div>
+        </section>
+      </article>
     </div>
   );
 }
