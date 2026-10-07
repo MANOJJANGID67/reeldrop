@@ -79,10 +79,10 @@ export default function Reviews() {
 
           {/* Rating Summary Banner */}
           <div className="inline-flex items-center gap-3 bg-white px-6 py-3 rounded-2xl shadow-xs border border-gray-100 mt-6">
-            <div className="flex text-amber-400 text-lg">★★★★★</div>
+            <div className="flex text-amber-500 text-lg">★★★★★</div>
             <span className="text-sm font-extrabold text-gray-900">4.9 / 5.0 Rating</span>
             <span className="text-gray-400 text-xs">&bull;</span>
-            <span className="text-xs text-gray-500">Based on verified user feedback</span>
+            <span className="text-xs text-gray-600">Based on verified user feedback</span>
           </div>
         </header>
 
@@ -103,12 +103,12 @@ export default function Reviews() {
                     </div>
                   </div>
                 </div>
-                <div className="flex text-amber-400 text-xs mb-3">★★★★★</div>
+                <div className="flex text-amber-500 text-xs mb-3">★★★★★</div>
                 <p className="text-xs sm:text-sm text-gray-600 leading-relaxed italic">
                   &quot;{item.review}&quot;
                 </p>
               </div>
-              <p className="text-[11px] text-gray-400 mt-6 pt-3 border-t border-gray-50">
+              <p className="text-xs text-gray-500 mt-6 pt-3 border-t border-gray-50">
                 {item.date}
               </p>
             </div>

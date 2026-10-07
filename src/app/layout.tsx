@@ -5,7 +5,7 @@ import { Inter } from 'next/font/google';
 import CookieConsent from '../components/CookieConsent';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'reeldropnow - Download Instagram Reels Video Online',
@@ -140,26 +140,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-BD6M2Y7HXC"
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-BD6M2Y7HXC');
-            `,
-          }}
-        />
-        <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1524992524941156"
-          crossOrigin="anonymous"
-        ></script>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://fundingchoicesmessages.google.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebApp) }}
@@ -170,6 +153,25 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className}>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-BD6M2Y7HXC"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-BD6M2Y7HXC');
+          `}
+        </Script>
+        {/* Google AdSense */}
+        <Script
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1524992524941156"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
         <header className="bg-white/90 backdrop-blur-md border-b border-gray-100 sticky top-0 z-50 transition-all">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2.5 group">

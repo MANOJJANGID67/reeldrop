@@ -205,7 +205,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-gray-900">Pricing and Limits</h3>
-              <span className="text-xs text-green-600 font-semibold uppercase tracking-wider">Unlimited Free Usage</span>
+              <span className="text-xs text-emerald-800 font-bold uppercase tracking-wider">Unlimited Free Usage</span>
             </div>
           </div>
           <p className="text-gray-600 leading-relaxed text-base">
@@ -213,15 +213,15 @@ export default function Home() {
           </p>
           <div className="grid sm:grid-cols-3 gap-4 mt-6 pt-4 border-t border-gray-100 text-sm">
             <div className="flex items-center space-x-2 text-gray-700">
-              <span className="text-green-500 font-bold">✓</span>
+              <span className="text-emerald-700 font-bold">✓</span>
               <span>No Daily Download Caps</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-700">
-              <span className="text-green-500 font-bold">✓</span>
+              <span className="text-emerald-700 font-bold">✓</span>
               <span>No Hidden Subscriptions</span>
             </div>
             <div className="flex items-center space-x-2 text-gray-700">
-              <span className="text-green-500 font-bold">✓</span>
+              <span className="text-emerald-700 font-bold">✓</span>
               <span>No Login or Signup</span>
             </div>
           </div>

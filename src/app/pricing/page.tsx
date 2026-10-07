@@ -45,38 +45,38 @@ export default function Pricing() {
           </div>
 
           <div className="py-8 space-y-4">
-            <h3 className="font-bold text-gray-900 text-sm uppercase tracking-wider text-gray-400">Included Features</h3>
+            <h3 className="font-bold text-gray-700 text-sm uppercase tracking-wider">Included Features</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-gray-700">
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>Unlimited daily Reel downloads</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>Full HD 1080p MP4 resolution</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>Zero watermarks added</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>Original audio stream synchronization</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>No account registration or login</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>Blazing-fast Cloudflare Edge bandwidth</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>iPhone, Android &amp; PC browser support</span>
               </div>
               <div className="flex items-center gap-2.5">
-                <span className="text-green-500 font-bold">✓</span>
+                <span className="text-emerald-700 font-bold">✓</span>
                 <span>100% private &amp; anonymous processing</span>
               </div>
             </div>
