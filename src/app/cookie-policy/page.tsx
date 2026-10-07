@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Cookie Policy | reeldropnow',
+  title: 'Cookie Policy & Privacy Preferences | reeldropnow',
   description: 'reeldropnow Cookie Policy: How we use cookies, Google AdSense cookies, analytics, and how to manage your cookie preferences.',
   alternates: { canonical: 'https://reeldropnow.com/cookie-policy' }
 };

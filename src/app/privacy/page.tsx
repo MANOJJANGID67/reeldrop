@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | reeldropnow',
-  description: 'reeldropnow privacy policy, cookies, Google AdSense disclosures, data protection, and user rights.',
+  title: 'Privacy Policy & Data Protection | reeldropnow',
+  description: 'Read the official reeldropnow privacy policy detailing data protection, cookie usage, Google AdSense compliance, and user rights.',
   alternates: { canonical: 'https://reeldropnow.com/privacy' }
 };
 

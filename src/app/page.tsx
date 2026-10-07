@@ -52,6 +52,8 @@ export default function Home() {
             <img 
               src="/logo.svg" 
               alt="reeldropnow logo" 
+              width={80}
+              height={80}
               className="w-full h-full object-contain rounded-[11px] bg-white" 
             />
           </div>

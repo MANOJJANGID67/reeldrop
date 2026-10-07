@@ -66,12 +66,10 @@ export default function FAQ() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
-        />
-      </head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
+      />
 
       <div className="max-w-4xl mx-auto">
         <nav className="text-xs text-gray-500 mb-6">
@@ -89,6 +87,8 @@ export default function FAQ() {
             Got questions? We have answers. Learn how reeldropnow works, troubleshooting tips, and legal guidelines.
           </p>
         </header>
+
+        <h2 className="text-xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
 
         <div className="space-y-4 mb-16">
           {faqList.map((item, idx) => (

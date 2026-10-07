@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | reeldropnow',
-  description: 'Terms and conditions for using reeldropnow Instagram Reels and video extraction tools.',
+  title: 'Terms of Service & Usage Guidelines | reeldropnow',
+  description: 'Terms and conditions for using reeldropnow Instagram Reels and video extraction tools. Understand user responsibilities and acceptable use.',
   alternates: { canonical: 'https://reeldropnow.com/terms' }
 };
 

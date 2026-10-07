@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'DMCA & Copyright Policy | reeldropnow',
-  description: 'reeldropnow DMCA compliance, copyright notices, and takedown procedure.',
+  description: 'Review the reeldropnow DMCA copyright policy, intellectual property guidelines, content removal requests, and official takedown procedure.',
   alternates: { canonical: 'https://reeldropnow.com/dmca' }
 };
 

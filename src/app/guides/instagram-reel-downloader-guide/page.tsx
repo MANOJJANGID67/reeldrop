@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Instagram Reel Downloader User Guide (2026 Manual) | reeldropnow',
+  title: 'Instagram Reel Downloader Guide & Manual | reeldropnow',
   description: 'In-depth overview of how reeldropnow processes Instagram Reels, troubleshooting tips, supported browsers, and performance metrics.',
   alternates: { canonical: 'https://reeldropnow.com/guides/instagram-reel-downloader-guide' }
 };

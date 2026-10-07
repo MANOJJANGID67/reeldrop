@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Download Public Instagram Reels Safely (2026 Guide) | reeldropnow',
+  title: 'Download Public Instagram Reels Safely | reeldropnow',
   description: 'Understand the difference between public and private reels, and learn how to safely save public Instagram content without logging in.',
   alternates: { canonical: 'https://reeldropnow.com/guides/how-to-download-public-instagram-reels' }
 };

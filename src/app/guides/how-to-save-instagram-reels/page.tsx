@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Save Instagram Reels with Audio (2026 Complete Guide) | reeldropnow',
+  title: 'Save Instagram Reels with Audio Online | reeldropnow',
   description: 'Learn how to save Instagram Reels with full original sound and audio directly to your phone or computer using reeldropnow.',
   alternates: { canonical: 'https://reeldropnow.com/guides/how-to-save-instagram-reels' }
 };

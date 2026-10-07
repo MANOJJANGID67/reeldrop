@@ -87,6 +87,7 @@ export default function Reviews() {
         </header>
 
         {/* Reviews Grid */}
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 text-center">Verified Creator Reviews</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {reviewsData.map((item, idx) => (
             <div key={idx} className="bg-white rounded-2xl p-6 shadow-xs border border-gray-100 flex flex-col justify-between">

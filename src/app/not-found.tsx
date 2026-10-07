@@ -5,7 +5,7 @@ export default function NotFound() {
     <div className="min-h-[70vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-md w-full bg-white rounded-3xl p-8 sm:p-12 shadow-sm border border-gray-100 text-center">
         <div className="w-16 h-16 mx-auto mb-6 p-2 rounded-2xl bg-indigo-50 border border-indigo-100 flex items-center justify-center">
-          <img src="/logo.svg" alt="reeldropnow" className="w-10 h-10" />
+          <img src="/logo.svg" alt="reeldropnow" width={40} height={40} className="w-10 h-10" />
         </div>
 
         <span className="inline-block px-3 py-1 bg-red-50 text-red-600 text-xs font-bold rounded-full uppercase tracking-wider mb-4">

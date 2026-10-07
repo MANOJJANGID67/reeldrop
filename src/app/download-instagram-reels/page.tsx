@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Download Instagram Reels | REELDROP',
-  description: 'The simplest way to download Instagram Reels. Fast, secure, and built for modern devices.',
+  title: 'Download Instagram Reels Online | reeldropnow',
+  description: 'The simplest way to download Instagram Reels online in full HD. Fast, secure, and built for iPhone, Android, PC, and all modern browsers.',
   alternates: { canonical: 'https://reeldropnow.com/download-instagram-reels' }
 };
 

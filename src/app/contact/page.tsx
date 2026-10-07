@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Contact Us | reeldropnow',
-  description: 'Get in touch with the reeldropnow team for support, inquiries, and feedback.',
+  title: 'Contact Us - Support & Inquiries | reeldropnow',
+  description: 'Get in touch with the reeldropnow support team for assistance, technical feedback, partnership inquiries, and DMCA copyright notices.',
   alternates: { canonical: 'https://reeldropnow.com/contact' }
 };
 
@@ -12,7 +12,7 @@ export default function Contact() {
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12">
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Contact Us</h1>
-        <p className="text-sm text-gray-500 mb-8">We are here to assist with any questions or support requests.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Direct Support Channels</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <div className="bg-indigo-50/50 p-6 rounded-xl border border-indigo-100">

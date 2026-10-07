@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Download Instagram Reels in Full HD (2026 Step-by-Step Guide) | reeldropnow',
+  title: 'How to Download Instagram Reels in Full HD | reeldropnow',
   description: 'Learn how to easily and safely download public Instagram Reels in original 1080p MP4 quality without watermark or shady apps using reeldropnow.',
   alternates: { canonical: 'https://reeldropnow.com/guides/how-to-download-instagram-reels' }
 };

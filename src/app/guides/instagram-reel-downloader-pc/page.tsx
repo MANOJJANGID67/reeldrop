@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Download Instagram Reels on PC & Mac (Windows / macOS) | reeldropnow',
+  title: 'Download Instagram Reels on PC & Mac | reeldropnow',
   description: 'Comprehensive guide to downloading Instagram Reels on PC, Windows, and Mac in full 1080p MP4 resolution using Chrome, Edge, and Safari with reeldropnow.',
   alternates: { canonical: 'https://reeldropnow.com/guides/instagram-reel-downloader-pc' }
 };

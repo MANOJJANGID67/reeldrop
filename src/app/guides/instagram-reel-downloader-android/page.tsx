@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Download Instagram Reels on Android to Gallery (2026 Guide) | reeldropnow',
+  title: 'Download Instagram Reels on Android Gallery | reeldropnow',
   description: 'Complete guide on how to download Instagram Reels in full HD MP4 directly to your Android device gallery using Google Chrome and reeldropnow.',
   alternates: { canonical: 'https://reeldropnow.com/guides/instagram-reel-downloader-android' }
 };

@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'About Us | reeldropnow',
-  description: 'Learn about reeldropnow, our mission, edge infrastructure, and commitment to fast, private, ad-light media extraction.',
+  title: 'About Us - Fast & Private Media Utility | reeldropnow',
+  description: 'Learn about reeldropnow, our mission, edge infrastructure, and our commitment to fast, private, ad-light media extraction online.',
   alternates: { canonical: 'https://reeldropnow.com/about' }
 };
 
@@ -12,7 +12,7 @@ export default function About() {
     <div className="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-12">
         <div className="flex items-center gap-3 mb-6">
-          <img src="/logo.svg" alt="reeldropnow" className="w-12 h-12 rounded-xl" />
+          <img src="/logo.svg" alt="reeldropnow" width={48} height={48} className="w-12 h-12 rounded-xl" />
           <div>
             <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900">About reeldropnow</h1>
             <p className="text-sm text-indigo-600 font-semibold">Fast, Private & Transparent Media Utility</p>

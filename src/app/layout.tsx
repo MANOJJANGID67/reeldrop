@@ -154,6 +154,8 @@ export default function RootLayout({
               <img 
                 src="/logo.svg" 
                 alt="reeldropnow logo" 
+                width={36}
+                height={36}
                 className="w-9 h-9 rounded-xl shadow-xs group-hover:scale-105 transition-transform" 
               />
               <span className="font-black text-xl tracking-tight text-gray-900">
@@ -196,7 +198,7 @@ export default function RootLayout({
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div>
                 <div className="flex items-center gap-2 mb-4">
-                  <img src="/logo.svg" alt="reeldropnow logo" className="w-6 h-6 rounded-lg" />
+                  <img src="/logo.svg" alt="reeldropnow logo" width={24} height={24} className="w-6 h-6 rounded-lg" />
                   <h3 className="font-bold text-gray-900 text-base">reeldrop<span className="text-indigo-600">now</span></h3>
                 </div>
                 <p className="text-xs text-gray-500 mb-4">Fast, free, and private online Instagram Reels and video downloader.</p>

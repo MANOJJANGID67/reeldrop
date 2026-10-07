@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'How to Save Instagram Reels on iPhone to Camera Roll (2026 Guide) | reeldropnow',
-  description: 'Step-by-step tutorial on downloading Instagram Reels directly into your iPhone Photos Camera Roll using Safari and reeldropnow without installing third-party apps.',
+  title: 'Save Instagram Reels on iPhone Camera Roll | reeldropnow',
+  description: 'Step-by-step tutorial on downloading Instagram Reels into your iPhone Photos Camera Roll using Safari and reeldropnow without extra apps.',
   alternates: { canonical: 'https://reeldropnow.com/guides/instagram-reel-downloader-iphone' }
 };
 

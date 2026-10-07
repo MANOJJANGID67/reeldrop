@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Instagram Video Downloader | REELDROP',
-  description: 'Download public Instagram videos using our fast, secure, online extraction tool.',
+  title: 'Instagram Video Downloader Online | reeldropnow',
+  description: 'Download public Instagram videos and posts using our fast, secure, online extraction tool. Save high quality MP4 videos with stereo sound.',
   alternates: { canonical: 'https://reeldropnow.com/instagram-video-downloader' }
 };
 
