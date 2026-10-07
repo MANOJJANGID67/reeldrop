@@ -206,26 +206,31 @@ export default async function BlogPostPage({ params }: Props) {
       )}
 
       {/* Main Content Body */}
-      <div
-        className="prose prose-indigo max-w-none text-gray-700 space-y-6 text-sm sm:text-base leading-relaxed"
-        dangerouslySetInnerHTML={{ __html: article.contentHtml }}
-      />
+      <section>
+        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">
+          Complete Guide &amp; Key Findings
+        </h2>
+        <div
+          className="prose prose-indigo max-w-none text-gray-700 space-y-6 text-sm sm:text-base leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: article.contentHtml }}
+        />
+      </section>
 
       {/* Frequently Asked Questions */}
       {article.faqs.length > 0 && (
         <section className="mt-14 pt-8 border-t border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
             Frequently Asked Questions
-          </h2>
+          </h3>
           <div className="space-y-4">
             {article.faqs.map((faq, idx) => (
               <div
                 key={idx}
                 className="bg-gray-50 rounded-xl p-5 border border-gray-100"
               >
-                <h3 className="font-bold text-gray-900 text-base mb-2">
+                <h4 className="font-bold text-gray-900 text-base mb-2">
                   {faq.question}
-                </h3>
+                </h4>
                 <p className="text-sm text-gray-600 leading-relaxed">
                   {faq.answer}
                 </p>
@@ -262,9 +267,9 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Related Articles Section */}
       {relatedArticles.length > 0 && (
         <section className="pt-8 border-t border-gray-200">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">
             Related Guides &amp; Resources
-          </h2>
+          </h3>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {relatedArticles.map((rel) => (
               <div
@@ -275,9 +280,9 @@ export default async function BlogPostPage({ params }: Props) {
                   <span className="text-[11px] font-bold text-indigo-600 block mb-1">
                     {rel.categoryLabel}
                   </span>
-                  <h3 className="font-bold text-gray-900 text-sm mb-2 hover:text-indigo-600 transition-colors">
+                  <h4 className="font-bold text-gray-900 text-sm mb-2 hover:text-indigo-600 transition-colors">
                     <Link href={`/blog/${rel.slug}`}>{rel.title}</Link>
-                  </h3>
+                  </h4>
                 </div>
                 <Link
                   href={`/blog/${rel.slug}`}

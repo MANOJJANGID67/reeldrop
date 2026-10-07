@@ -57,11 +57,11 @@ export default function BlogIndexPage() {
               <span className="inline-block px-3 py-1 bg-indigo-500/30 text-indigo-200 text-xs font-bold rounded-lg mb-4 uppercase tracking-wider">
                 Featured Guide &bull; {featuredArticle.categoryLabel}
               </span>
-              <h2 className="text-2xl sm:text-4xl font-extrabold mb-4 leading-tight">
+              <h3 className="text-2xl sm:text-4xl font-extrabold mb-4 leading-tight">
                 <Link href={`/blog/${featuredArticle.slug}`} className="hover:text-indigo-200 transition-colors">
                   {featuredArticle.title}
                 </Link>
-              </h2>
+              </h3>
               <p className="text-indigo-100/90 text-sm sm:text-base leading-relaxed mb-6">
                 {featuredArticle.metaDescription}
               </p>
@@ -130,9 +130,9 @@ export default function BlogIndexPage() {
 
       {/* Tool Call-to-Action Banner */}
       <aside className="mt-16 bg-gray-50 border border-gray-200/80 rounded-3xl p-8 sm:p-10 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-3">
+        <h3 className="text-2xl font-bold text-gray-900 mb-3">
           Download Instagram Reels in Original Quality
-        </h2>
+        </h3>
         <p className="text-sm text-gray-600 max-w-xl mx-auto mb-6">
           Need to save a public Reel or video right now? Use our free, fast, unlimited media utility with zero watermarks.
         </p>

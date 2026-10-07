@@ -1,0 +1,63 @@
+
+const llmsContent = `# reeldropnow
+
+> reeldropnow is a free, high-speed, browser-based media utility designed to download public Instagram Reels, videos, and stereo audio streams in original 1080p MP4 quality without software installation, registration, or watermarks.
+
+## Core Pages & Services
+- [Home Downloader](https://reeldropnow.com/): Free online Instagram Reels and video downloader with real-time stream extraction.
+- [About Us](https://reeldropnow.com/about): Mission statement, edge cloud architecture, and commitment to privacy.
+- [Services & Products](https://reeldropnow.com/services): Overview of free media download, audio extraction, and cloud streaming tools.
+- [Pricing & Plans](https://reeldropnow.com/pricing): 100% free model with zero subscription fees, transparent ad-supported edge infrastructure.
+- [User Reviews & Testimonials](https://reeldropnow.com/reviews): Verified user feedback, testimonials, and 4.9/5 satisfaction ratings.
+- [Frequently Asked Questions (FAQ)](https://reeldropnow.com/faq): Comprehensive answers regarding reel downloads, device compatibility, troubleshooting, and copyright.
+- [Contact Us](https://reeldropnow.com/contact): Support desk, feedback submissions, and technical partnership inquiries.
+- [Privacy Policy](https://reeldropnow.com/privacy): Data protection practices, cookie usage, Google AdSense disclosures, and user rights.
+- [Terms of Service](https://reeldropnow.com/terms): Terms and conditions for media extraction and responsible use.
+- [Cookie Policy](https://reeldropnow.com/cookie-policy): Details on functional cookies, Google AdSense personalization, and consent settings.
+- [DMCA Policy](https://reeldropnow.com/dmca): Digital Millennium Copyright Act compliance, copyright notices, and content removal process.
+
+## User Guides & Tutorials
+- [How to Download Instagram Reels](https://reeldropnow.com/guides/how-to-download-instagram-reels): Step-by-step tutorial on saving public Instagram Reels in original high definition.
+- [How to Download Public Instagram Reels Safely](https://reeldropnow.com/guides/how-to-download-public-instagram-reels): Explains public vs. private media boundaries and safe online habits.
+- [How to Save Instagram Reels with Audio](https://reeldropnow.com/guides/how-to-save-instagram-reels): Comprehensive guide for preserving original stereo sound and commercial music tracks.
+- [Download Reels on iPhone to Camera Roll](https://reeldropnow.com/guides/instagram-reel-downloader-iphone): Tutorial on saving Reels into the iOS Photos Camera Roll via Safari.
+- [Download Reels on Android to Gallery](https://reeldropnow.com/guides/instagram-reel-downloader-android): Tutorial on saving Reels into the Android Photos Gallery via Google Chrome.
+- [Download Reels on PC & Mac](https://reeldropnow.com/guides/instagram-reel-downloader-pc): Desktop instructions for Windows and macOS browsers.
+- [Instagram Reel Downloader Guide & Manual](https://reeldropnow.com/guides/instagram-reel-downloader-guide): In-depth technical guide covering server infrastructure, limits, and troubleshooting.
+- [Instagram Video Download Guide](https://reeldropnow.com/guides/instagram-video-download-guide): Guide to downloading Instagram feed posts, timeline videos, and IGTV clips.
+
+## Blog & Educational Guides
+- [Blog Hub](https://reeldropnow.com/blog): In-depth tutorials, platform mechanics, and tool analysis.
+- [Instagram Reels to MP3](https://reeldropnow.com/blog/instagram-reels-to-mp3-download-audio): Extracting high-bitrate audio and soundtracks from Reels.
+- [Download Instagram Highlights](https://reeldropnow.com/blog/how-to-download-instagram-highlights): Saving public Highlights in full definition.
+- [Download Stories Without Screenshots](https://reeldropnow.com/blog/how-to-download-instagram-stories-without-screenshots): Saving clean uncompressed Story media.
+- [Why Can't I See Someone's Instagram Story](https://reeldropnow.com/blog/why-cant-i-see-someones-instagram-story): Troubleshooting Story visibility, Close Friends, and expiration.
+- [Does Instagram Notify When You Screenshot a Story](https://reeldropnow.com/blog/does-instagram-notify-when-you-screenshot-a-story): Complete 2026 platform screenshot notification rules.
+- [Anonymous Instagram Story Viewers Explained](https://reeldropnow.com/blog/anonymous-instagram-story-viewers-explained): How anonymous viewers operate and safety guidelines.
+- [Private Instagram Story Viewers: Myths vs Facts](https://reeldropnow.com/blog/private-instagram-story-viewers-myths-and-facts): Technical analysis debunking fake private viewer tools.
+- [How to See Who Reposted Your Post](https://reeldropnow.com/blog/how-to-see-who-reposted-your-instagram-post): Checking active Story reshares and post reach.
+- [Recently Followed on Instagram Explained](https://reeldropnow.com/blog/how-to-see-recently-followed-on-instagram): Following list sorting, algorithms, and web differences.
+- [Export Instagram Followers to CSV](https://reeldropnow.com/blog/how-to-export-instagram-followers-csv): Methods for exporting follower data safely.
+- [Instagram Follower Tracker Tools Compared](https://reeldropnow.com/blog/instagram-follower-tracker-tools-compared): Tracking tool evaluation and security risks.
+- [Snoopreport Review & Alternatives](https://reeldropnow.com/blog/snoopreport-review-legit-alternatives): Comprehensive evaluation of Instagram activity tracking.
+
+## Utility Endpoints & Alternate Keywords
+- [Instagram Reel Downloader](https://reeldropnow.com/instagram-reel-downloader): Dedicated tool endpoint for saving Instagram Reels.
+- [Instagram Video Downloader](https://reeldropnow.com/instagram-video-downloader): Dedicated tool endpoint for saving Instagram feed videos.
+- [Public Instagram Reel Downloader](https://reeldropnow.com/public-instagram-reel-downloader): Public-only extraction pipeline.
+- [Reel Downloader Online](https://reeldropnow.com/reel-downloader): Online browser extraction tool without software installation.
+- [Download Instagram Reels](https://reeldropnow.com/download-instagram-reels): High-speed media extraction interface.
+
+## Optional
+- [Full LLM Context](https://reeldropnow.com/llms-full.txt): Complete, concatenated site documentation and user guides for comprehensive model ingestion.
+`;
+
+export async function GET() {
+  return new Response(llmsContent, {
+    status: 200,
+    headers: {
+      'Content-Type': 'text/plain; charset=utf-8',
+      'Cache-Control': 'public, max-age=86400, s-maxage=86400',
+    },
+  });
+}
