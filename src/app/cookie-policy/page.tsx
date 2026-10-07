@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import EmailLink from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'Cookie Policy & Privacy Preferences | reeldropnow',
@@ -91,7 +92,7 @@ export default function CookiePolicy() {
           <p>
             If you have any questions about our use of cookies or tracking technologies, please contact us at:
             <br />
-            <strong>Email:</strong> <a href="mailto:support@reeldropnow.com" className="text-indigo-600 underline">support@reeldropnow.com</a>
+            <strong>Email:</strong> <EmailLink email="support@reeldropnow.com" className="text-indigo-600 underline" />
           </p>
         </div>
       </div>

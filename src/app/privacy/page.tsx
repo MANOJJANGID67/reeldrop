@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import EmailLink from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy & Data Protection | reeldropnow',
@@ -102,7 +103,7 @@ export default function Privacy() {
           <p>
             If you have questions, feedback, or data privacy requests concerning this policy, please contact our privacy compliance team at:
             <br />
-            <strong>Email:</strong> <a href="mailto:support@reeldropnow.com" className="text-indigo-600 underline">support@reeldropnow.com</a>
+            <strong>Email:</strong> <EmailLink email="support@reeldropnow.com" className="text-indigo-600 underline" />
             <br />
             <strong>Official Website:</strong> <Link href="/" className="text-indigo-600 underline">https://reeldropnow.com</Link>
           </p>

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import EmailLink from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'DMCA & Copyright Policy | reeldropnow',
@@ -44,9 +45,9 @@ export default function Dmca() {
           <p>
             Please direct all formal DMCA notices and copyright communications to our designated agent via email:
             <br />
-            <strong>Email:</strong> <a href="mailto:dmca@reeldropnow.com" className="text-indigo-600 underline font-semibold">dmca@reeldropnow.com</a>
+            <strong>Email:</strong> <EmailLink email="dmca@reeldropnow.com" className="text-indigo-600 underline font-semibold" />
             <br />
-            <strong>Alternative Support:</strong> <a href="mailto:support@reeldropnow.com" className="text-indigo-600 underline">support@reeldropnow.com</a>
+            <strong>Alternative Support:</strong> <EmailLink email="support@reeldropnow.com" className="text-indigo-600 underline" />
           </p>
           <p className="text-sm text-gray-500 italic">
             Note: Because we do not store content on our servers, to permanently remove a video from being accessed across the internet, you should also report the content directly to Instagram.

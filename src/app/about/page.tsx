@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import EmailLink from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'About Us - Fast & Private Media Utility | reeldropnow',
@@ -61,7 +62,7 @@ export default function About() {
           <p>
             We actively listen to user feedback, bug reports, and partnership inquiries. Feel free to contact our team anytime through our 
             <Link href="/contact" className="text-indigo-600 underline font-semibold ml-1">Contact Page</Link> or directly at 
-            <a href="mailto:support@reeldropnow.com" className="text-indigo-600 underline ml-1">support@reeldropnow.com</a>.
+            <EmailLink email="support@reeldropnow.com" className="text-indigo-600 underline ml-1" />.
           </p>
         </div>
       </div>

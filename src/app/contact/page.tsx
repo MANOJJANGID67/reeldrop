@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import EmailLink from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'Contact Us - Support & Inquiries | reeldropnow',
@@ -26,9 +27,7 @@ export default function Contact() {
             </p>
             <p className="text-sm">
               <strong>Email:</strong>{' '}
-              <a href="mailto:support@reeldropnow.com" className="text-indigo-600 underline font-semibold">
-                support@reeldropnow.com
-              </a>
+              <EmailLink email="support@reeldropnow.com" className="text-indigo-600 underline font-semibold" />
             </p>
           </div>
 
@@ -39,9 +38,7 @@ export default function Contact() {
             </p>
             <p className="text-sm">
               <strong>Email:</strong>{' '}
-              <a href="mailto:dmca@reeldropnow.com" className="text-indigo-600 underline font-semibold">
-                dmca@reeldropnow.com
-              </a>
+              <EmailLink email="dmca@reeldropnow.com" className="text-indigo-600 underline font-semibold" />
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import EmailLink from '@/components/EmailLink';
 
 export const metadata: Metadata = {
   title: 'Terms of Service & Usage Guidelines | reeldropnow',
@@ -71,7 +72,7 @@ export default function Terms() {
           <p>
             If you have questions or inquiries regarding these Terms of Service, please reach out to:
             <br />
-            <strong>Email:</strong> <a href="mailto:support@reeldropnow.com" className="text-indigo-600 underline">support@reeldropnow.com</a>
+            <strong>Email:</strong> <EmailLink email="support@reeldropnow.com" className="text-indigo-600 underline" />
           </p>
         </div>
       </div>
