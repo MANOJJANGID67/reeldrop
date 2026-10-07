@@ -33,37 +33,37 @@ export default function Page() {
           To preserve the original sound, you need an extraction tool that captures the public media stream as broadcast.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Simple Steps to Save Reels with Sound</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Simple Steps to Save Reels with Sound</h3>
         <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200/80 my-6 space-y-6 not-prose">
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">1</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Copy Public Reel Link</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Copy Public Reel Link</h4>
               <p className="text-sm text-gray-600">Tap Share &gt; Copy Link on any public Instagram Reel.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">2</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Paste in reeldropnow</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Paste in reeldropnow</h4>
               <p className="text-sm text-gray-600">Open <Link href="/" className="text-indigo-600 underline font-semibold">reeldropnow.com</Link> and paste the URL.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">3</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Download with Crystal Clear Audio</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Download with Crystal Clear Audio</h4>
               <p className="text-sm text-gray-600">Click &quot;Download Media&quot; and your MP4 file will save with original stereo sound.</p>
             </div>
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Audio Quality &amp; Codec Specifications</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Audio Quality &amp; Codec Specifications</h3>
         <p>
           reeldropnow delivers video with advanced AAC audio encoding at up to 192 kbps bitrate. This ensures clear dialogue, balanced bass, and clean high frequencies that match the original creator upload.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Quick Audio Troubleshooting Tips</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Quick Audio Troubleshooting Tips</h3>
         <ul className="list-disc pl-6 space-y-2 text-gray-700">
           <li><strong>No sound on iPhone?</strong> Check if your physical Ring/Silent switch on the side of your device is switched to orange (silent). Turn silent mode off to hear audio in the Photos app.</li>
           <li><strong>Muted in browser preview?</strong> Modern web browsers often mute videos automatically on preview. Click the speaker icon to unmute.</li>
@@ -74,7 +74,7 @@ export default function Page() {
       <RelatedGuides currentSlug="how-to-save-instagram-reels" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Save Reels with Audio Now</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Save Reels with Audio Now</h3>
         <p className="text-sm text-gray-600 mb-6">100% free, high-speed, no quality degradation.</p>
         <Link href="/" className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-colors">
           Start Downloading

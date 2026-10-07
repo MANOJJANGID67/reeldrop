@@ -17,80 +17,77 @@ export default function CookiePolicy() {
         </nav>
 
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Cookie Policy</h1>
-        <p className="text-sm text-gray-500 mb-8">Last Updated: October 6, 2026</p>
+        <p className="text-sm text-gray-500 mb-8">Last Updated: October 7, 2026</p>
 
         <div className="prose prose-indigo max-w-none text-gray-700 space-y-6 text-sm sm:text-base leading-relaxed">
           <p>
-            This Cookie Policy explains how <strong>reeldropnow</strong> (<Link href="/" className="text-indigo-600 underline">https://reeldropnow.com</Link>) 
-            uses cookies and similar tracking technologies when you visit our website. This policy should be read alongside our 
+            This page explains how <strong>reeldropnow</strong> (<Link href="/" className="text-indigo-600 underline">https://reeldropnow.com</Link>) 
+            uses cookies. It also explains what choices you have as a visitor. Please read this alongside our 
             <Link href="/privacy" className="text-indigo-600 underline ml-1">Privacy Policy</Link>.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">1. What Are Cookies?</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How We Use Cookies and Your Choices</h2>
+
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">1. What Are Cookies?</h3>
           <p>
-            Cookies are small text files that are placed on your computer or mobile device by websites that you visit. They are widely used 
-            to make websites work efficiently, remember user preferences, and provide analytical reporting information to website operators.
+            Cookies are small text files. Websites save them on your phone, tablet, or computer when you visit a webpage. 
+            Cookies help websites remember your visits. They also help web pages load faster and run smoothly.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">2. How We Use Cookies</h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">2. Types of Cookies We Use</h3>
           <p>
-            reeldropnow utilizes cookies for several specific purposes:
+            We use cookies to keep our website fast, stable, and safe. Here are the main types:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose my-6">
             <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-              <h3 className="font-bold text-gray-900 mb-1 text-sm">🔒 Essential &amp; Functional Cookies</h3>
-              <p className="text-xs text-gray-600">Required for website navigation, user sessions, security rate limiting, and remembering your cookie consent choice.</p>
+              <h4 className="font-bold text-gray-900 mb-1 text-sm">🔒 Essential Cookies</h4>
+              <p className="text-xs text-gray-600">Needed for page loading, basic security, and remembering your cookie choices.</p>
             </div>
             <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-              <h3 className="font-bold text-gray-900 mb-1 text-sm">📊 Performance &amp; Analytics</h3>
-              <p className="text-xs text-gray-600">Help us understand how visitors interact with reeldropnow, identify broken links, and optimize edge server latency.</p>
+              <h4 className="font-bold text-gray-900 mb-1 text-sm">📊 Analytics Cookies</h4>
+              <p className="text-xs text-gray-600">Help us count visits and see which tools people like so we can make the site better.</p>
             </div>
             <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-              <h3 className="font-bold text-gray-900 mb-1 text-sm">🎯 Advertising &amp; AdSense Cookies</h3>
-              <p className="text-xs text-gray-600">Used by Google AdSense to serve relevant ads based on prior visits and prevent the same ad from showing repeatedly.</p>
+              <h4 className="font-bold text-gray-900 mb-1 text-sm">🎯 Advertising Cookies</h4>
+              <p className="text-xs text-gray-600">Used by Google AdSense to show relevant ads and prevent the same ad from repeating.</p>
             </div>
             <div className="p-4 bg-gray-50 rounded-xl border border-gray-100">
-              <h3 className="font-bold text-gray-900 mb-1 text-sm">🛡️ Security &amp; Fraud Prevention</h3>
-              <p className="text-xs text-gray-600">Detect automated scrapers, DDoS attacks, and abuse of our public media conversion infrastructure.</p>
+              <h4 className="font-bold text-gray-900 mb-1 text-sm">🛡️ Safety Cookies</h4>
+              <p className="text-xs text-gray-600">Help stop spam, malicious attacks, and bad bots from slowing down our servers.</p>
             </div>
           </div>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">3. Google AdSense &amp; Third-Party Cookies</h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">3. Google AdSense and Third Parties</h3>
           <p>
-            Google, as a third-party vendor, uses cookies to serve advertisements on reeldropnow. Google&apos;s use of the DoubleClick DART cookie 
-            enables it and its partners to display ads based on your visit to this site and other websites on the internet.
-          </p>
-          <p>
-            You can review how Google uses information from sites that use its services by visiting: 
-            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline ml-1">Google Advertising Policies</a>.
+            Google shows ads on our website through Google AdSense. Google uses cookies to show helpful ads based on visits to this and other websites. 
+            You can read how Google uses data on their official 
+            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline ml-1">advertising policy page</a>.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">4. How to Manage and Control Cookies</h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">4. How You Can Manage or Turn Off Cookies</h3>
           <p>
-            You have the right to decide whether to accept or reject cookies. Most modern web browsers automatically accept cookies, 
-            but you can modify your browser settings to decline cookies if you prefer:
+            You have full control over cookies. You can turn off or delete cookies at any time in your web browser:
           </p>
           <ul className="list-disc pl-6 space-y-1">
-            <li><strong>Google Chrome:</strong> Settings &gt; Privacy and Security &gt; Cookies and other site data.</li>
-            <li><strong>Apple Safari:</strong> Preferences &gt; Privacy &gt; Manage Website Data.</li>
-            <li><strong>Mozilla Firefox:</strong> Options &gt; Privacy &amp; Security &gt; Enhanced Tracking Protection.</li>
-            <li><strong>Microsoft Edge:</strong> Settings &gt; Site permissions &gt; Cookies and site data.</li>
+            <li><strong>Google Chrome:</strong> Open Settings, click Privacy and Security, then choose Cookies.</li>
+            <li><strong>Apple Safari:</strong> Open Preferences, click Privacy, and manage stored website data.</li>
+            <li><strong>Mozilla Firefox:</strong> Open Settings, click Privacy &amp; Security, and choose your settings.</li>
+            <li><strong>Microsoft Edge:</strong> Open Settings, click Cookies and site permissions.</li>
           </ul>
           <p className="mt-3">
-            To opt out of personalized interest-based advertising across the web, visit the 
-            <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline ml-1">Digital Advertising Alliance Consumer Choice tool</a> or the 
-            <a href="https://youronlinechoices.eu/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline ml-1">European Interactive Digital Advertising Alliance</a>.
+            You can also visit consumer opt-out tools such as the 
+            <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline ml-1">Digital Advertising Alliance</a> or 
+            <a href="https://youronlinechoices.eu/" target="_blank" rel="noopener noreferrer" className="text-indigo-600 underline ml-1">Your Online Choices</a>.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">5. Updates to This Policy</h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">5. Updates to This Policy</h3>
           <p>
-            We may update our Cookie Policy from time to time in response to evolving legal, technical, or operational requirements. 
-            Any modifications will become effective immediately upon posting to this page.
+            We may update this policy from time to time. When we make updates, we will post the new text on this page with a new date.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">6. Contact Us</h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">6. Contact Us</h3>
           <p>
-            If you have any questions about our use of cookies or tracking technologies, please contact us at:
+            If you have questions about how we use cookies, please contact our support team:
             <br />
             <strong>Email:</strong> <EmailLink email="support@reeldropnow.com" className="text-indigo-600 underline" />
           </p>

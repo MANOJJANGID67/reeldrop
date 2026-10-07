@@ -21,13 +21,15 @@ export default function Dmca() {
             respects the intellectual property rights of copyright holders and complies with the provisions of the Digital Millennium Copyright Act (17 U.S.C. &sect; 512).
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">1. Technical Role of reeldropnow</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Notice and Takedown Procedure</h2>
+
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">1. Technical Role of reeldropnow</h3>
           <p>
             reeldropnow functions strictly as an automated, transient technical pipeline. We do not host, store, index, cache, or maintain any video files or media content 
             on our servers. All media data requested by users is extracted on the fly from publicly available third-party sources and delivered directly to the user&apos;s client device.
           </p>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">2. Filing a DMCA Takedown Notice</h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">2. Filing a DMCA Takedown Notice</h3>
           <p>
             If you are a copyright owner or an authorized agent thereof and believe that any material accessed through our utility infringes upon your copyright, you may submit a formal notification 
             in writing containing the following required information:
@@ -41,7 +43,7 @@ export default function Dmca() {
             <li>A statement that the information in the notification is accurate, and under penalty of perjury, that you are authorized to act on behalf of the copyright owner.</li>
           </ul>
 
-          <h2 className="text-xl font-bold text-gray-900 mt-8 mb-3">3. Designated DMCA Agent Contact</h2>
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">3. Designated DMCA Agent Contact</h3>
           <p>
             Please direct all formal DMCA notices and copyright communications to our designated agent via email:
             <br />

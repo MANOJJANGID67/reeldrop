@@ -18,57 +18,58 @@ export default function Page() {
         Free Online Instagram Reel Downloader
       </h1>
       <p className="text-base text-gray-600 mb-8 leading-relaxed">
-        reeldropnow is a dedicated online Instagram Reel Downloader made for everyone. We believe in simplicity, speed, and privacy. 
-        Whether you are saving cooking recipes, fitness routines, funny clips, or educational tutorials, our tool lets you save high-quality MP4 videos in seconds.
+        reeldropnow is an easy online tool to save Instagram Reels. We built this website to be fast, simple, and safe for everyone. 
+        You can save food recipes, gym tips, funny clips, or study guides. Each clip downloads in clean MP4 video format in only a few seconds.
       </p>
 
       <div className="space-y-8 text-gray-700 text-sm sm:text-base leading-relaxed">
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Top Advantages of Our Reel Downloader</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Features and How Our Reel Downloader Works</h2>
+          
+          <h3 className="text-xl font-bold text-gray-900 mt-6 mb-3">Top Advantages of Our Tool</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose mb-6">
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h3 className="font-bold text-gray-900 text-base mb-1">⚡ Super Fast Edge Conversion</h3>
-              <p className="text-xs text-gray-600">Built on Cloudflare edge infrastructure to parse public links in under a second worldwide.</p>
+              <h4 className="font-bold text-gray-900 text-base mb-1">⚡ Fast Global Speeds</h4>
+              <p className="text-xs text-gray-600">Our edge system reads public links fast so your download starts right away.</p>
             </div>
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h3 className="font-bold text-gray-900 text-base mb-1">🔒 100% Private &amp; Anonymous</h3>
-              <p className="text-xs text-gray-600">No passwords or accounts required. You can download freely without sharing private details.</p>
+              <h4 className="font-bold text-gray-900 text-base mb-1">🔒 Safe and Private</h4>
+              <p className="text-xs text-gray-600">You never need to log in or share private account details. Your downloads stay safe.</p>
             </div>
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h3 className="font-bold text-gray-900 text-base mb-1">📱 Zero Software Installation</h3>
-              <p className="text-xs text-gray-600">Works in any web browser on iPhone, Android, Windows, Mac, and Linux without downloading apps.</p>
+              <h4 className="font-bold text-gray-900 text-base mb-1">📱 Works on Any Device</h4>
+              <p className="text-xs text-gray-600">Runs smoothly in any web browser on iPhone, Android, Windows, Mac, and Linux without apps.</p>
             </div>
             <div className="p-5 bg-white rounded-2xl border border-gray-100 shadow-xs">
-              <h3 className="font-bold text-gray-900 text-base mb-1">🔊 Stereo Audio Synchronized</h3>
-              <p className="text-xs text-gray-600">Preserves original soundtracks, background music, and speech with high audio clarity.</p>
+              <h4 className="font-bold text-gray-900 text-base mb-1">🔊 Clean Audio Included</h4>
+              <p className="text-xs text-gray-600">Keeps original sound, music tracks, and clear speech so your video sounds loud and clear.</p>
             </div>
           </div>
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">How the Extraction Engine Works</h2>
+          <h3 className="text-xl font-bold text-gray-900 mb-3">How Our Tool Saves Videos</h3>
           <p className="mb-3">
-            When you enter an Instagram URL, our backend connects to Instagram&apos;s public content delivery servers. 
-            It identifies the source video stream in the highest available bitrate and serves it directly to your browser as an MP4 file. 
-            No third-party overlays, watermarks, or compression artifacts are added.
+            When you paste a link, our server finds the direct video file from Instagram. 
+            It sends the clean video straight to your device in high definition. We never add watermarks, logos, or extra blur to your clips.
           </p>
           <p>
-            You can verify video quality across your favourite media players, including QuickTime, VLC, Windows Media Player, and mobile galleries.
+            You can play your saved MP4 files in any media player or your phone photos album.
           </p>
         </div>
 
         <div>
-          <h2 className="text-2xl font-bold text-gray-900 mb-3">Responsible &amp; Legal Usage</h2>
+          <h3 className="text-xl font-bold text-gray-900 mb-3">Respecting Creator Copyrights</h3>
           <p>
-            Our tool only works with publicly available media. We do not support private profile scraping or bypassing Instagram security controls. 
-            Remember to respect copyright laws and never claim or redistribute another creator&apos;s work without their clear permission.
+            Our tool only works with public videos. It cannot download media from private accounts. 
+            Please respect creator rights. Only save media for personal offline use. Always ask creators for permission before you share their clips with friends.
           </p>
         </div>
       </div>
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Try the Downloader Now</h2>
-        <p className="text-sm text-gray-600 mb-6">Experience clean, unlimited Instagram Reels downloading with zero cost.</p>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Try the Downloader Now</h3>
+        <p className="text-sm text-gray-600 mb-6">Enjoy free, fast, and simple Instagram Reel downloads right now on your phone or PC.</p>
         <Link href="/" className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-colors">
           Start Downloading Media
         </Link>

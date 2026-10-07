@@ -21,7 +21,7 @@ export default function Contact() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
           <div className="bg-indigo-50/50 p-6 rounded-xl border border-indigo-100">
-            <h3 className="font-bold text-gray-900 text-lg mb-2">📬 General Support &amp; Feedback</h3>
+            <h4 className="font-bold text-gray-900 text-lg mb-2">📬 General Support &amp; Feedback</h4>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
               Have questions about saving videos, browser compatibility, or feature suggestions? Send us an email and our support crew will get back to you.
             </p>
@@ -32,7 +32,7 @@ export default function Contact() {
           </div>
 
           <div className="bg-amber-50/50 p-6 rounded-xl border border-amber-100">
-            <h3 className="font-bold text-gray-900 text-lg mb-2">⚖️ Legal, Copyright &amp; DMCA</h3>
+            <h4 className="font-bold text-gray-900 text-lg mb-2">⚖️ Legal, Copyright &amp; DMCA</h4>
             <p className="text-sm text-gray-600 mb-4 leading-relaxed">
               For copyright inquiries, content takedown requests, or terms compliance notices, please contact our designated legal agent directly.
             </p>
@@ -45,14 +45,14 @@ export default function Contact() {
 
         <div className="space-y-8 text-gray-700 text-sm sm:text-base leading-relaxed">
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3">Response Expectations</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Response Expectations</h3>
             <p>
               Our support team answers most messages within <strong>24 to 48 business hours</strong>, Monday through Friday. If you are reporting a specific reel link that failed to parse, please include the full URL so we can reproduce and resolve the issue quickly.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Help Before You Email</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Quick Help Before You Email</h3>
             <p className="mb-4">
               Many common questions can be answered immediately using our free online guides:
             </p>
@@ -77,7 +77,7 @@ export default function Contact() {
           </div>
 
           <div>
-            <h2 className="text-xl font-bold text-gray-900 mb-3">Helpful Company Links</h2>
+            <h3 className="text-xl font-bold text-gray-900 mb-3">Helpful Company Links</h3>
             <ul className="list-disc pl-6 space-y-1.5 text-sm">
               <li>Learn more about our technology on the <Link href="/about" className="text-indigo-600 underline">About Us</Link> page.</li>
               <li>Review our privacy commitments in our <Link href="/privacy" className="text-indigo-600 underline">Privacy Policy</Link>.</li>

@@ -33,23 +33,23 @@ export default function Page() {
           highest available bitrate stream directly to you.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Supported Media Types on Instagram</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Supported Media Types on Instagram</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 not-prose my-6">
           <div className="p-4 bg-white rounded-xl border border-gray-100 shadow-xs">
-            <h3 className="font-bold text-gray-900 text-sm mb-1">🎬 Instagram Reels</h3>
+            <h4 className="font-bold text-gray-900 text-sm mb-1">🎬 Instagram Reels</h4>
             <p className="text-xs text-gray-600">Vertical short videos up to 90 seconds in full 1080p definition.</p>
           </div>
           <div className="p-4 bg-white rounded-xl border border-gray-100 shadow-xs">
-            <h3 className="font-bold text-gray-900 text-sm mb-1">📹 Standard Feed Videos</h3>
+            <h4 className="font-bold text-gray-900 text-sm mb-1">📹 Standard Feed Videos</h4>
             <p className="text-xs text-gray-600">Classic timeline post videos in landscape, square, or vertical ratios.</p>
           </div>
           <div className="p-4 bg-white rounded-xl border border-gray-100 shadow-xs">
-            <h3 className="font-bold text-gray-900 text-sm mb-1">🎞️ Carousel Video Slides</h3>
+            <h4 className="font-bold text-gray-900 text-sm mb-1">🎞️ Carousel Video Slides</h4>
             <p className="text-xs text-gray-600">Multi-item posts featuring individual video clips and segments.</p>
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Best Media Players for Offline Playback</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Best Media Players for Offline Playback</h3>
         <p>
           Videos downloaded through reeldropnow use the universally compatible MP4 container with H.264 encoding. 
           You can play them effortlessly without installing specialized codec packs on:
@@ -61,7 +61,7 @@ export default function Page() {
           <li><strong>Cross-Platform:</strong> VLC Media Player (free and open source).</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Privacy &amp; Safety Guarantees</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Privacy &amp; Safety Guarantees</h3>
         <p>
           Because reeldropnow relies exclusively on edge-proxied queries, your personal identity, cookies, and browsing habits are never shared 
           with third-party advertisers. All downloads are direct, encrypted over HTTPS, and completely private.
@@ -71,7 +71,7 @@ export default function Page() {
       <RelatedGuides currentSlug="instagram-video-download-guide" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2">Try reeldropnow Today</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">Try reeldropnow Today</h3>
         <p className="text-sm text-gray-600 mb-6">Clean, ad-light Instagram media downloader built for speed.</p>
         <Link href="/" className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-colors">
           Download Instagram Video Now

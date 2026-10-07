@@ -117,7 +117,7 @@ export default function Reviews() {
 
         {/* Feedback / Submit Box */}
         <div className="bg-white rounded-3xl p-8 sm:p-12 border border-gray-100 shadow-sm text-center max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">Have Feedback or a Feature Request?</h2>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">Have Feedback or a Feature Request?</h3>
           <p className="text-sm text-gray-600 mb-6 max-w-lg mx-auto">
             We are continuously optimizing extraction speeds and parser algorithms. Let our team know how we can improve your experience.
           </p>

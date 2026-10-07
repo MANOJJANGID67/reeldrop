@@ -60,7 +60,7 @@ export default function RelatedGuides({ currentSlug }: RelatedGuidesProps) {
 
   return (
     <section className="mt-12 pt-8 border-t border-gray-200">
-      <h2 className="text-xl font-bold text-gray-900 mb-4">Related Guides &amp; Tutorials</h2>
+      <h3 className="text-xl font-bold text-gray-900 mb-4">Related Guides &amp; Tutorials</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         {related.map((guide) => (
           <Link
@@ -68,9 +68,9 @@ export default function RelatedGuides({ currentSlug }: RelatedGuidesProps) {
             href={guide.href}
             className="p-4 bg-gray-50 hover:bg-indigo-50/60 rounded-xl border border-gray-100 hover:border-indigo-200 transition-colors block group"
           >
-            <h3 className="font-bold text-gray-900 text-sm group-hover:text-indigo-600 transition-colors mb-1">
+            <h4 className="font-bold text-gray-900 text-sm group-hover:text-indigo-600 transition-colors mb-1">
               {guide.title}
-            </h3>
+            </h4>
             <p className="text-xs text-gray-600 line-clamp-2">
               {guide.desc}
             </p>

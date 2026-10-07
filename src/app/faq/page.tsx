@@ -106,7 +106,7 @@ export default function FAQ() {
 
         {/* Still Have Questions Box */}
         <div className="bg-white rounded-3xl p-8 border border-gray-100 text-center shadow-xs">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Still Have Questions or Need Help?</h2>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">Still Have Questions or Need Help?</h3>
           <p className="text-xs sm:text-sm text-gray-600 mb-6">
             Our support desk is always happy to assist with broken URLs, edge connection errors, or general inquiries.
           </p>

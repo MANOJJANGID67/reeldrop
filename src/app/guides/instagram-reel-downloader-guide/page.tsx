@@ -33,14 +33,14 @@ export default function Page() {
           and zero buffering.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Troubleshooting Common Issues</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Troubleshooting Common Issues</h3>
         <ul className="list-disc pl-6 space-y-2">
           <li><strong>Invalid URL Error:</strong> Ensure the link matches standard format (e.g., <code>https://www.instagram.com/reel/C.../</code>).</li>
           <li><strong>Private Video Notice:</strong> Our servers can only access public reels. If the account is private, extraction will fail.</li>
           <li><strong>Slow Download:</strong> Check your local network bandwidth. Our edge servers deliver streams at up to 10 Gbps speeds.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Device &amp; Browser Compatibility</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Device &amp; Browser Compatibility</h3>
         <p>
           reeldropnow is 100% responsive and tested across all major modern operating systems and browsers, including:
         </p>

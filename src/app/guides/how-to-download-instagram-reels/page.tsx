@@ -38,13 +38,13 @@ export default function Page() {
           <li><strong>Original 1080p Resolution:</strong> Downloads the original MP4 video stream with pristine audio fidelity.</li>
         </ul>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Step-by-Step Instructions</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Step-by-Step Instructions</h3>
         
         <div className="bg-gray-50 p-6 rounded-2xl border border-gray-200/80 my-6 space-y-6 not-prose">
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">1</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Copy the Instagram Reel URL</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Copy the Instagram Reel URL</h4>
               <p className="text-sm text-gray-600">
                 Open the Instagram app or website, find the public reel you want to save, tap the <strong>Share</strong> button (the paper plane icon), 
                 and select <strong>&quot;Copy Link&quot;</strong>.
@@ -55,7 +55,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">2</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Open reeldropnow &amp; Paste</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Open reeldropnow &amp; Paste</h4>
               <p className="text-sm text-gray-600">
                 Navigate to <Link href="/" className="text-indigo-600 underline font-semibold">reeldropnow.com</Link> in your web browser. 
                 Paste the copied link into the main input box.
@@ -66,7 +66,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">3</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Download Your MP4 Video</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Download Your MP4 Video</h4>
               <p className="text-sm text-gray-600">
                 Click <strong>&quot;Download Media&quot;</strong>. Within seconds, your high-definition MP4 video file will begin downloading 
                 directly to your device without any watermark.
@@ -75,7 +75,7 @@ export default function Page() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Important Guidelines on Copyright &amp; Ethical Usage</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Important Guidelines on Copyright &amp; Ethical Usage</h3>
         <p>
           reeldropnow is engineered for lawful, personal offline archiving, educational study, and creative review. 
           Please respect the intellectual property of original content creators. Never re-upload or monetize someone else&apos;s content 

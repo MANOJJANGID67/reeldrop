@@ -33,7 +33,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">1</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Copy Reel Link from Instagram App</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Copy Reel Link from Instagram App</h4>
               <p className="text-sm text-gray-600">
                 In the Instagram Android app, view the public Reel you want to save. Tap the <strong>Share</strong> icon (paper airplane), 
                 then tap <strong>&quot;Copy link&quot;</strong>.
@@ -44,7 +44,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">2</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Open Chrome &amp; Visit reeldropnow</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Open Chrome &amp; Visit reeldropnow</h4>
               <p className="text-sm text-gray-600">
                 Launch Chrome or any web browser and open <Link href="/" className="text-indigo-600 underline font-semibold">reeldropnow.com</Link>. 
                 Long-press inside the input box and select <strong>Paste</strong>.
@@ -55,7 +55,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">3</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">Tap Download Media</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">Tap Download Media</h4>
               <p className="text-sm text-gray-600">
                 Tap <strong>&quot;Download Media&quot;</strong>. The video will be fetched directly in original 1080p MP4 quality. 
                 Your browser will instantly notify you that the file has been downloaded.
@@ -66,7 +66,7 @@ export default function Page() {
           <div className="flex gap-4">
             <div className="w-9 h-9 bg-indigo-600 text-white rounded-xl flex items-center justify-center font-bold text-lg shrink-0">4</div>
             <div>
-              <h3 className="font-bold text-gray-900 text-base mb-1">View in Phone Gallery / Google Photos</h3>
+              <h4 className="font-bold text-gray-900 text-base mb-1">View in Phone Gallery / Google Photos</h4>
               <p className="text-sm text-gray-600">
                 Open your default <strong>Gallery</strong> or <strong>Google Photos</strong> app. Your video will be available 
                 in the <em>Downloads</em> album, complete with original synced audio.
@@ -75,7 +75,7 @@ export default function Page() {
           </div>
         </div>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Avoid Third-Party Downloader APKs on Android?</h2>
+        <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Avoid Third-Party Downloader APKs on Android?</h3>
         <p>
           Android users are frequently targeted by unofficial downloader APKs that request broad storage, contact, and camera permissions. 
           Many such apps secretly run background crypto miners or aggressive adware. <strong>reeldropnow</strong> operates entirely inside your 

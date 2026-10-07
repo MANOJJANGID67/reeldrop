@@ -182,7 +182,7 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">Pricing and Limits</h2>
+              <h3 className="text-2xl font-bold text-gray-900">Pricing and Limits</h3>
               <span className="text-xs text-green-600 font-semibold uppercase tracking-wider">Unlimited Free Usage</span>
             </div>
           </div>
@@ -217,7 +217,7 @@ export default function Home() {
               ★
             </div>
             <div>
-              <h2 className="text-lg sm:text-xl font-bold text-gray-900">Rated 4.9 / 5.0 by 50,000+ Creators</h2>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900">Rated 4.9 / 5.0 by 50,000+ Creators</h3>
               <p className="text-xs sm:text-sm text-gray-500">Read what video editors, creators, and social managers say about our speed and clean downloads.</p>
             </div>
           </div>
@@ -238,7 +238,7 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-gray-900">Copyright & Laws</h2>
+              <h3 className="text-2xl font-bold text-gray-900">Copyright & Laws</h3>
               <span className="text-xs text-amber-700 font-semibold uppercase tracking-wider">Responsible & Ethical Use</span>
             </div>
           </div>
@@ -259,17 +259,17 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
               <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">1</div>
-              <h3 className="font-bold text-gray-900 mb-1">Copy Reel Link</h3>
+              <h4 className="font-bold text-gray-900 mb-1">Copy Reel Link</h4>
               <p className="text-xs text-gray-600">Open Instagram, choose the public Reel you want, click Share, and copy the link.</p>
             </div>
             <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
               <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">2</div>
-              <h3 className="font-bold text-gray-900 mb-1">Paste in reeldropnow</h3>
+              <h4 className="font-bold text-gray-900 mb-1">Paste in reeldropnow</h4>
               <p className="text-xs text-gray-600">Paste the URL into the input field above and click &quot;Download Media&quot;.</p>
             </div>
             <div className="p-5 rounded-2xl bg-gray-50 border border-gray-100 text-center">
               <div className="w-10 h-10 bg-indigo-600 text-white font-black rounded-xl flex items-center justify-center mx-auto mb-3">3</div>
-              <h3 className="font-bold text-gray-900 mb-1">Save to Device</h3>
+              <h4 className="font-bold text-gray-900 mb-1">Save to Device</h4>
               <p className="text-xs text-gray-600">Your MP4 video begins saving straight into your mobile or computer Downloads folder.</p>
             </div>
           </div>
@@ -277,28 +277,28 @@ export default function Home() {
 
         {/* Frequently Asked Questions (GEO / AEO) */}
         <section className="bg-white rounded-3xl p-8 shadow-sm border border-gray-100">
-          <h2 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h3>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h3 className="font-semibold text-lg text-gray-800">What is reeldropnow?</h3>
+              <h4 className="font-semibold text-lg text-gray-800">What is reeldropnow?</h4>
               <p className="text-gray-600 mt-2 text-sm leading-relaxed">
                 reeldropnow is an online browser-based tool to download Instagram Reels Video online to your device in original MP4 high-resolution format without watermarks.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg text-gray-800">Can reeldropnow download private Reels?</h3>
+              <h4 className="font-semibold text-lg text-gray-800">Can reeldropnow download private Reels?</h4>
               <p className="text-gray-600 mt-2 text-sm leading-relaxed">
                 No. reeldropnow strictly respects privacy boundaries and only extracts media from public Instagram posts and Reels.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg text-gray-800">Is reeldropnow compatible with iPhone and Android?</h3>
+              <h4 className="font-semibold text-lg text-gray-800">Is reeldropnow compatible with iPhone and Android?</h4>
               <p className="text-gray-600 mt-2 text-sm leading-relaxed">
                 Yes, reeldropnow works seamlessly on all web browsers including Safari on iOS, Chrome on Android, Windows PC, and macOS without requiring app installations.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-lg text-gray-800">Are there limits on how many reels I can download?</h3>
+              <h4 className="font-semibold text-lg text-gray-800">Are there limits on how many reels I can download?</h4>
               <p className="text-gray-600 mt-2 text-sm leading-relaxed">
                 We offer a completely free service with no limits or additional costs. You can download as many public reels as you need.
               </p>
@@ -315,7 +315,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 text-center pt-8 border-t border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-2">Helpful Guides &amp; Resources</h3>
+            <h4 className="text-lg font-bold text-gray-900 mb-2">Helpful Guides &amp; Resources</h4>
             <p className="text-xs text-gray-500 mb-6">Explore our step-by-step tutorials on saving Reels, audio extraction, and device setups.</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-semibold">
               <Link href="/guides/how-to-download-instagram-reels" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">

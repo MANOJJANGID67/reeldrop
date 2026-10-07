@@ -101,7 +101,7 @@ export default function Services() {
 
         {/* Recommended Guides & Platform Resources */}
         <section className="bg-white rounded-3xl p-8 mb-16 border border-gray-100 shadow-xs">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Recommended Device Guides &amp; Tutorials</h2>
+          <h3 className="text-xl font-bold text-gray-900 mb-4">Recommended Device Guides &amp; Tutorials</h3>
           <p className="text-xs sm:text-sm text-gray-600 mb-6">
             Get step-by-step instructions for extracting high-definition videos tailored to your specific smartphone or operating system.
           </p>
@@ -128,7 +128,7 @@ export default function Services() {
 
         {/* Call to Action */}
         <div className="bg-indigo-600 rounded-3xl p-8 sm:p-12 text-center text-white shadow-lg">
-          <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need to Download a Reel Right Now?</h2>
+          <h3 className="text-2xl sm:text-3xl font-extrabold mb-3">Need to Download a Reel Right Now?</h3>
           <p className="text-indigo-100 text-sm sm:text-base max-w-xl mx-auto mb-6">
             Paste your Instagram link and download full HD videos directly to your device within seconds. No sign-up required.
           </p>
