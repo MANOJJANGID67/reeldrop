@@ -17,6 +17,11 @@ const nextConfig: NextConfig = {
         destination: 'https://reeldropnow.com/:path*',
         permanent: true,
       },
+      {
+        source: '/cdn-cgi/l/email-protection',
+        destination: '/contact',
+        permanent: true,
+      },
       // Consolidate duplicate landing pages to primary /instagram-reel-downloader
       {
         source: '/download-instagram-reels',

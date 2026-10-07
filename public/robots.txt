@@ -1,10 +1,14 @@
 User-Agent: *
 Allow: /
 Allow: /instagram-reel-downloader
-Allow: /reel-downloader
+Allow: /instagram-story-downloader
+Allow: /instagram-video-downloader
+Allow: /facebook-reel-downloader
 Allow: /guides/
+Allow: /blog/
 Allow: /llms.txt
 Allow: /llms-full.txt
+Disallow: /cdn-cgi/
 Disallow: /api/
 Disallow: /worker/
 Disallow: /internal/
