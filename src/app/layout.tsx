@@ -193,6 +193,9 @@ export default function RootLayout({
               <Link href="/pricing" className="hover:text-indigo-600 transition-colors hidden sm:inline-block">
                 Pricing
               </Link>
+              <Link href="/blog" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
+                Blog
+              </Link>
               <Link href="/faq" className="hover:text-indigo-600 transition-colors hidden md:inline-block">
                 FAQ
               </Link>
@@ -247,6 +250,7 @@ export default function RootLayout({
               <div>
                 <h3 className="font-bold text-gray-900 mb-4">Guides &amp; Tutorials</h3>
                 <ul className="space-y-2 text-sm text-gray-600">
+                  <li><Link href="/blog" className="hover:text-indigo-600 font-semibold text-indigo-600">Explore Blog &amp; Guides &rarr;</Link></li>
                   <li><Link href="/guides/how-to-download-instagram-reels" className="hover:text-indigo-600">How to Download Reels</Link></li>
                   <li><Link href="/guides/instagram-reel-downloader-iphone" className="hover:text-indigo-600">Reels on iPhone</Link></li>
                   <li><Link href="/guides/instagram-reel-downloader-android" className="hover:text-indigo-600">Reels on Android</Link></li>
