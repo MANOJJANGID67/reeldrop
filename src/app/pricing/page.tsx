@@ -117,6 +117,18 @@ export default function Pricing() {
                 Our infrastructure and bandwidth expenses are funded through clean, non-intrusive third-party advertising partners like Google AdSense.
               </p>
             </div>
+            <div>
+              <h4 className="font-bold text-gray-900">Can creators and researchers use reeldropnow for free?</h4>
+              <p className="text-gray-600 mt-1 leading-relaxed">
+                Yes! Creators, video editors, social media analysts, and everyday users can all access unlimited downloads at zero cost.
+              </p>
+            </div>
+            <div>
+              <h4 className="font-bold text-gray-900">Will reeldropnow ever add paid paywalls?</h4>
+              <p className="text-gray-600 mt-1 leading-relaxed">
+                No. Our core utility will always remain free. We believe in keeping essential digital tools open, ad-light, and accessible to everyone.
+              </p>
+            </div>
           </div>
         </div>
 

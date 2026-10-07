@@ -22,24 +22,46 @@ export default function Page() {
 
       <div className="prose prose-indigo max-w-none text-gray-700 space-y-6 leading-relaxed">
         <p className="text-lg text-gray-600 font-medium">
-          Instagram protects user privacy by enforcing strict access controls between public and private accounts. 
-          Understanding how public media distribution works ensures you stay safe and avoid phishing scams that claim to hack private accounts.
+          Instagram protects user privacy by enforcing clear boundaries between public and private accounts. 
+          Understanding how public media delivery works helps you save videos safely while avoiding online scams.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">What Makes a Reel Public?</h2>
         <p>
-          A public Reel is published by an account with open privacy settings. These videos can be discovered, viewed, and shared by anyone 
+          A public Reel is published by an account with open privacy settings. These videos can be discovered, watched, and shared by anyone 
           on or off Instagram. <strong>reeldropnow</strong> specializes in indexing and extracting media exclusively from these publicly broadcast streams.
         </p>
 
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Public vs. Private Media Comparison</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 not-prose my-6">
+          <div className="p-5 bg-emerald-50/60 rounded-xl border border-emerald-100">
+            <h3 className="font-bold text-gray-900 text-base mb-1">✅ Public Reels</h3>
+            <p className="text-xs text-gray-600 mb-2">Shared freely with the world without follower approvals.</p>
+            <ul className="text-xs text-gray-600 space-y-1 list-disc pl-4">
+              <li>Open URL access in any browser</li>
+              <li>Supported for 1080p MP4 download</li>
+              <li>No login credentials required</li>
+            </ul>
+          </div>
+          <div className="p-5 bg-red-50/60 rounded-xl border border-red-100">
+            <h3 className="font-bold text-gray-900 text-base mb-1">❌ Private Reels</h3>
+            <p className="text-xs text-gray-600 mb-2">Restricted exclusively to accepted followers.</p>
+            <ul className="text-xs text-gray-600 space-y-1 list-disc pl-4">
+              <li>Encrypted behind user sessions</li>
+              <li>Cannot and will not be downloaded</li>
+              <li>Never share passwords to bypass</li>
+            </ul>
+          </div>
+        </div>
+
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Beware of Private Profile Downloader Scams</h2>
         <p>
-          Never trust websites or services that claim they can &quot;hack&quot; or download media from private Instagram accounts. 
+          Never trust websites or apps that claim they can &quot;hack&quot; or download media from private Instagram accounts. 
           Such services are almost universally phishing attempts designed to steal your two-factor codes and Instagram passwords. 
           reeldropnow never requests login credentials and will never support bypassing private user permissions.
         </p>
 
-        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How to Save Public Reels</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">How to Save Public Reels in Seconds</h2>
         <p>
           Simply copy the link from any public post, paste it into our tool on <Link href="/" className="text-indigo-600 underline font-semibold">reeldropnow.com</Link>, 
           and download the high-definition MP4 directly to your device.
@@ -49,7 +71,7 @@ export default function Page() {
       <RelatedGuides currentSlug="how-to-download-public-instagram-reels" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Safe &amp; Private Downloads</h3>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Safe &amp; Private Downloads</h2>
         <p className="text-sm text-gray-600 mb-6">No software, no login, 100% free and transparent.</p>
         <Link href="/" className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-colors">
           Download Public Reel Now

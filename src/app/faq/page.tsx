@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Frequently Asked Questions (FAQ) | reeldropnow Help Center',
-  description: 'Find answers to common questions about downloading Instagram Reels, audio extraction, device compatibility, security, and troubleshooting on reeldropnow.',
+  description: 'Find quick answers about downloading Instagram Reels, audio extraction, device support, and troubleshooting on reeldropnow.',
   alternates: { canonical: 'https://reeldropnow.com/faq' }
 };
 

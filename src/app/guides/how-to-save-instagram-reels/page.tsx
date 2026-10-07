@@ -23,13 +23,13 @@ export default function Page() {
       <div className="prose prose-indigo max-w-none text-gray-700 space-y-6 leading-relaxed">
         <p className="text-lg text-gray-600 font-medium">
           One of the biggest frustrations when trying to save Reels using native Instagram features (like saving to drafts or stories) 
-          is that trending commercial audio often gets muted due to licensing restrictions. With <strong>reeldropnow</strong>, you can 
+          is that trending commercial audio often gets muted due to copyright licensing restrictions. With <strong>reeldropnow</strong>, you can 
           save the complete MP4 video with full, synchronized stereo audio intact.
         </p>
 
         <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Why Native Saving Mutes Trending Sound</h2>
         <p>
-          When you tap &quot;Save to Camera Roll&quot; inside the Instagram app story editor, Instagram routinely removes copyrighted music tracks. 
+          When you tap &quot;Save to Camera Roll&quot; inside the Instagram app story editor, Instagram routinely strips out copyrighted music tracks. 
           To preserve the original sound, you need an extraction tool that captures the public media stream as broadcast.
         </p>
 
@@ -57,12 +57,24 @@ export default function Page() {
             </div>
           </div>
         </div>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Audio Quality &amp; Codec Specifications</h2>
+        <p>
+          reeldropnow delivers video with advanced AAC audio encoding at up to 192 kbps bitrate. This ensures clear dialogue, balanced bass, and clean high frequencies that match the original creator upload.
+        </p>
+
+        <h2 className="text-2xl font-bold text-gray-900 mt-8 mb-4">Quick Audio Troubleshooting Tips</h2>
+        <ul className="list-disc pl-6 space-y-2 text-gray-700">
+          <li><strong>No sound on iPhone?</strong> Check if your physical Ring/Silent switch on the side of your device is switched to orange (silent). Turn silent mode off to hear audio in the Photos app.</li>
+          <li><strong>Muted in browser preview?</strong> Modern web browsers often mute videos automatically on preview. Click the speaker icon to unmute.</li>
+          <li><strong>Check file in media player:</strong> Open the downloaded MP4 in VLC, QuickTime, or Windows Media Player to verify audio playback.</li>
+        </ul>
       </div>
 
       <RelatedGuides currentSlug="how-to-save-instagram-reels" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
-        <h3 className="text-xl font-bold text-gray-900 mb-2">Save Reels with Audio Now</h3>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Save Reels with Audio Now</h2>
         <p className="text-sm text-gray-600 mb-6">100% free, high-speed, no quality degradation.</p>
         <Link href="/" className="inline-flex items-center justify-center px-8 py-3.5 border border-transparent text-base font-bold rounded-xl text-white bg-indigo-600 hover:bg-indigo-700 shadow-sm transition-colors">
           Start Downloading
