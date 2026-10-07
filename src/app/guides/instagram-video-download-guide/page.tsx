@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import RelatedGuides from '@/components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Instagram Video Download Guide & Manual | reeldropnow',
@@ -45,6 +46,8 @@ export default function Page() {
           with third-party advertisers. All downloads are direct and private.
         </p>
       </div>
+
+      <RelatedGuides currentSlug="instagram-video-download-guide" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Try reeldropnow</h3>

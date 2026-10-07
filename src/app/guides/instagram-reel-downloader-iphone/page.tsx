@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import RelatedGuides from '@/components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Save Instagram Reels on iPhone Camera Roll | reeldropnow',
@@ -80,6 +81,8 @@ export default function Page() {
           <li><strong>Link won&apos;t load?</strong> Make sure the Reel is from a public creator profile. Instagram restricts media from private accounts.</li>
         </ul>
       </div>
+
+      <RelatedGuides currentSlug="instagram-reel-downloader-iphone" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Save Reels on Your iPhone</h3>

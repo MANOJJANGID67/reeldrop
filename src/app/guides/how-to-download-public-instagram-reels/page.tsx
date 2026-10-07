@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import RelatedGuides from '@/components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Download Public Instagram Reels Safely | reeldropnow',
@@ -44,6 +45,8 @@ export default function Page() {
           and download the high-definition MP4 directly to your device.
         </p>
       </div>
+
+      <RelatedGuides currentSlug="how-to-download-public-instagram-reels" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Safe &amp; Private Downloads</h3>

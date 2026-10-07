@@ -203,6 +203,30 @@ export default function Home() {
               <span>No Login or Signup</span>
             </div>
           </div>
+          <div className="mt-4 pt-3 border-t border-gray-50">
+            <Link href="/pricing" className="text-xs sm:text-sm font-bold text-indigo-600 hover:text-indigo-700 hover:underline inline-flex items-center gap-1">
+              Read our full pricing &amp; ad transparency policy &rarr;
+            </Link>
+          </div>
+        </section>
+
+        {/* User Reviews & Ratings Banner */}
+        <section className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm border border-gray-100 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-amber-50 rounded-2xl flex items-center justify-center text-amber-500 text-2xl font-black shrink-0">
+              ★
+            </div>
+            <div>
+              <h2 className="text-lg sm:text-xl font-bold text-gray-900">Rated 4.9 / 5.0 by 50,000+ Creators</h2>
+              <p className="text-xs sm:text-sm text-gray-500">Read what video editors, creators, and social managers say about our speed and clean downloads.</p>
+            </div>
+          </div>
+          <Link 
+            href="/reviews" 
+            className="shrink-0 px-5 py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-800 font-bold text-xs rounded-xl border border-gray-200 transition-colors"
+          >
+            Read All Reviews &rarr;
+          </Link>
         </section>
 
         {/* Copyright & Laws Section */}
@@ -221,6 +245,12 @@ export default function Home() {
           <p className="text-gray-700 leading-relaxed text-sm md:text-base">
             It&apos;s important to note that downloading content from Instagram without the permission of the owner may violate the platform&apos;s terms of service and could result in your account being suspended or banned if you use that content without concern. You should only download content that you have permission to use or that is available under a Creative Commons license.
           </p>
+          <div className="mt-4 pt-3 border-t border-amber-200/60 text-xs text-amber-900 font-medium flex flex-wrap gap-4">
+            <span>Learn more:</span>
+            <Link href="/dmca" className="underline hover:text-amber-950 font-bold">DMCA Copyright Policy</Link>
+            <Link href="/terms" className="underline hover:text-amber-950 font-bold">Terms of Service</Link>
+            <Link href="/privacy" className="underline hover:text-amber-950 font-bold">Privacy Policy</Link>
+          </div>
         </section>
 
         {/* How It Works (AEO Optimized) */}
@@ -275,13 +305,50 @@ export default function Home() {
             </div>
           </div>
 
+          <div className="mt-8 text-center">
+            <Link 
+              href="/faq" 
+              className="inline-flex items-center gap-1 text-indigo-600 hover:text-indigo-800 font-bold text-sm underline"
+            >
+              Have more questions? Read our full FAQ with 10+ answers in the Help Center &rarr;
+            </Link>
+          </div>
+
           <div className="mt-12 text-center pt-8 border-t border-gray-100">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Helpful Guides & Resources</h3>
-            <div className="flex flex-wrap justify-center gap-4 text-sm font-medium">
-              <Link href="/guides/how-to-download-instagram-reels" className="text-indigo-600 hover:underline">How to Download Reels</Link>
-              <Link href="/guides/instagram-reel-downloader-iphone" className="text-indigo-600 hover:underline">Reels on iPhone Guide</Link>
-              <Link href="/guides/instagram-reel-downloader-pc" className="text-indigo-600 hover:underline">Reels on PC Guide</Link>
-              <Link href="/guides/instagram-video-download-guide" className="text-indigo-600 hover:underline">Instagram Video Guide</Link>
+            <h3 className="text-lg font-bold text-gray-900 mb-2">Helpful Guides &amp; Resources</h3>
+            <p className="text-xs text-gray-500 mb-6">Explore our step-by-step tutorials on saving Reels, audio extraction, and device setups.</p>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs font-semibold">
+              <Link href="/guides/how-to-download-instagram-reels" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                How to Download Reels
+              </Link>
+              <Link href="/guides/how-to-save-instagram-reels" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                Save Reels with Audio
+              </Link>
+              <Link href="/guides/instagram-reel-downloader-iphone" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                Reels on iPhone (iOS)
+              </Link>
+              <Link href="/guides/instagram-reel-downloader-android" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                Reels on Android Gallery
+              </Link>
+              <Link href="/guides/instagram-reel-downloader-pc" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                Reels on PC &amp; Mac
+              </Link>
+              <Link href="/guides/how-to-download-public-instagram-reels" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                Public Reels Guide
+              </Link>
+              <Link href="/guides/instagram-reel-downloader-guide" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                User Guide &amp; Manual
+              </Link>
+              <Link href="/guides/instagram-video-download-guide" className="p-3 bg-gray-50 rounded-xl hover:bg-indigo-50 hover:text-indigo-600 border border-gray-100 transition-colors">
+                Instagram Video Guide
+              </Link>
+            </div>
+            <div className="mt-6 flex flex-wrap justify-center gap-6 text-xs font-bold text-indigo-600">
+              <Link href="/services" className="hover:underline">Explore All Services &rarr;</Link>
+              <Link href="/pricing" className="hover:underline">Pricing Breakdown &rarr;</Link>
+              <Link href="/reviews" className="hover:underline">Creator Reviews &rarr;</Link>
+              <Link href="/faq" className="hover:underline">FAQ Help Center &rarr;</Link>
+              <Link href="/about" className="hover:underline">About reeldropnow &rarr;</Link>
             </div>
           </div>
         </section>

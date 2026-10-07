@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import RelatedGuides from '@/components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'How to Download Instagram Reels in Full HD | reeldropnow',
@@ -81,6 +82,8 @@ export default function Page() {
           without their explicit authorization.
         </p>
       </div>
+
+      <RelatedGuides currentSlug="how-to-download-instagram-reels" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Ready to Download?</h3>

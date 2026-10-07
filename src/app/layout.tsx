@@ -233,8 +233,11 @@ export default function RootLayout({
                   <li><Link href="/guides/how-to-download-instagram-reels" className="hover:text-indigo-600">How to Download Reels</Link></li>
                   <li><Link href="/guides/instagram-reel-downloader-iphone" className="hover:text-indigo-600">Reels on iPhone</Link></li>
                   <li><Link href="/guides/instagram-reel-downloader-android" className="hover:text-indigo-600">Reels on Android</Link></li>
-                  <li><Link href="/guides/instagram-reel-downloader-pc" className="hover:text-indigo-600">Reels on PC</Link></li>
+                  <li><Link href="/guides/instagram-reel-downloader-pc" className="hover:text-indigo-600">Reels on PC &amp; Mac</Link></li>
                   <li><Link href="/guides/how-to-save-instagram-reels" className="hover:text-indigo-600">Save Reels with Audio</Link></li>
+                  <li><Link href="/guides/how-to-download-public-instagram-reels" className="hover:text-indigo-600">Public Reels Guide</Link></li>
+                  <li><Link href="/guides/instagram-reel-downloader-guide" className="hover:text-indigo-600">Downloader User Manual</Link></li>
+                  <li><Link href="/guides/instagram-video-download-guide" className="hover:text-indigo-600">Instagram Video Guide</Link></li>
                 </ul>
               </div>
               <div>
@@ -246,6 +249,7 @@ export default function RootLayout({
                   <li><Link href="/terms" className="hover:text-indigo-600">Terms of Service</Link></li>
                   <li><Link href="/cookie-policy" className="hover:text-indigo-600">Cookie Policy</Link></li>
                   <li><Link href="/dmca" className="hover:text-indigo-600">DMCA Notice</Link></li>
+                  <li><a href="/llms.txt" className="hover:text-indigo-600" target="_blank" rel="noopener noreferrer">AI / LLM Docs (llms.txt)</a></li>
                 </ul>
               </div>
             </div>

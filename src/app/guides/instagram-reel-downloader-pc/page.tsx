@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import RelatedGuides from '@/components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Download Instagram Reels on PC & Mac | reeldropnow',
@@ -69,6 +70,8 @@ export default function Page() {
           <li><strong>No Watermarks:</strong> Clean video files without added branding logos.</li>
         </ul>
       </div>
+
+      <RelatedGuides currentSlug="instagram-reel-downloader-pc" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Save Reels on PC &amp; Mac</h3>

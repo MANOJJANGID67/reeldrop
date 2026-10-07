@@ -3,6 +3,8 @@ Allow: /
 Allow: /instagram-reel-downloader
 Allow: /reel-downloader
 Allow: /guides/
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /api/
 Disallow: /worker/
 Disallow: /internal/

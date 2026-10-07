@@ -99,6 +99,33 @@ export default function Services() {
           ))}
         </div>
 
+        {/* Recommended Guides & Platform Resources */}
+        <section className="bg-white rounded-3xl p-8 mb-16 border border-gray-100 shadow-xs">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Recommended Device Guides &amp; Tutorials</h2>
+          <p className="text-xs sm:text-sm text-gray-600 mb-6">
+            Get step-by-step instructions for extracting high-definition videos tailored to your specific smartphone or operating system.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs font-semibold">
+            <Link href="/guides/instagram-reel-downloader-iphone" className="p-4 bg-gray-50 hover:bg-indigo-50 rounded-xl border border-gray-100 transition-colors">
+              <span className="block font-bold text-sm text-gray-900 mb-1">iPhone &amp; iPad</span>
+              <span className="text-gray-500 font-normal">Save directly to iOS Camera Roll via Safari</span>
+            </Link>
+            <Link href="/guides/instagram-reel-downloader-android" className="p-4 bg-gray-50 hover:bg-indigo-50 rounded-xl border border-gray-100 transition-colors">
+              <span className="block font-bold text-sm text-gray-900 mb-1">Android Devices</span>
+              <span className="text-gray-500 font-normal">Download straight into Google/Samsung Gallery</span>
+            </Link>
+            <Link href="/guides/instagram-reel-downloader-pc" className="p-4 bg-gray-50 hover:bg-indigo-50 rounded-xl border border-gray-100 transition-colors">
+              <span className="block font-bold text-sm text-gray-900 mb-1">PC &amp; Mac</span>
+              <span className="text-gray-500 font-normal">Save 1080p clips to Windows &amp; macOS storage</span>
+            </Link>
+          </div>
+          <div className="mt-6 pt-4 border-t border-gray-100 flex flex-wrap justify-between items-center gap-4 text-xs font-bold text-indigo-600">
+            <Link href="/pricing" className="hover:underline">Transparent $0 Free Pricing &rarr;</Link>
+            <Link href="/reviews" className="hover:underline">Read Creator Testimonials &rarr;</Link>
+            <Link href="/faq" className="hover:underline">Frequently Asked Questions &rarr;</Link>
+          </div>
+        </section>
+
         {/* Call to Action */}
         <div className="bg-indigo-600 rounded-3xl p-8 sm:p-12 text-center text-white shadow-lg">
           <h2 className="text-2xl sm:text-3xl font-extrabold mb-3">Need to Download a Reel Right Now?</h2>

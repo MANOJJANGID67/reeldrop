@@ -119,6 +119,18 @@ export default function Pricing() {
             </div>
           </div>
         </div>
+
+        {/* Related Resources */}
+        <div className="mt-8 bg-white rounded-2xl p-6 border border-gray-100 flex flex-wrap items-center justify-between gap-4 text-xs font-semibold">
+          <span className="text-gray-500">Explore reeldropnow:</span>
+          <div className="flex flex-wrap gap-4 text-indigo-600">
+            <Link href="/services" className="hover:underline">Digital Services Suite &rarr;</Link>
+            <Link href="/reviews" className="hover:underline">User Testimonials &rarr;</Link>
+            <Link href="/faq" className="hover:underline">Help &amp; FAQ Center &rarr;</Link>
+            <Link href="/about" className="hover:underline">About Our Mission &rarr;</Link>
+            <Link href="/contact" className="hover:underline">Contact Desk &rarr;</Link>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import RelatedGuides from '@/components/RelatedGuides';
 
 export const metadata: Metadata = {
   title: 'Save Instagram Reels with Audio Online | reeldropnow',
@@ -57,6 +58,8 @@ export default function Page() {
           </div>
         </div>
       </div>
+
+      <RelatedGuides currentSlug="how-to-save-instagram-reels" />
 
       <div className="mt-12 text-center bg-indigo-50/60 p-8 rounded-2xl border border-indigo-100">
         <h3 className="text-xl font-bold text-gray-900 mb-2">Save Reels with Audio Now</h3>
