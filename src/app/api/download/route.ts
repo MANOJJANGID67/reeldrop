@@ -2,6 +2,17 @@ import { NextRequest, NextResponse } from 'next/server';
 
 export const runtime = 'edge';
 
+export async function GET() {
+  return NextResponse.json(
+    {
+      status: 'ok',
+      service: 'reeldropnow Media Extraction API',
+      methods: ['POST', 'GET']
+    },
+    { status: 200 }
+  );
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json().catch(() => null);
