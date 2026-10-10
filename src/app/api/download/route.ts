@@ -82,7 +82,7 @@ export async function POST(req: NextRequest) {
     if (!workerResponse.ok) {
       const err = await workerResponse.json().catch(() => null);
       const errorMessage = err?.error || err?.message || 'Worker error';
-      return NextResponse.json({ error: errorMessage }, { status: workerResponse.status });
+      return NextResponse.json({ error: errorMessage, code: err?.code }, { status: workerResponse.status });
     }
 
     const responseHeaders = new Headers();
