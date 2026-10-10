@@ -4,11 +4,7 @@ services:
   worker:
     build:
       context: ./worker2
-    ports:
-      - "80:8080"
-    dns:
-      - 8.8.8.8
-      - 1.1.1.1
+    network_mode: "host"
     environment:
       - PORT=8080
       - WORKER_SECRET=super_secret_token
