@@ -57,17 +57,14 @@ export default function Home() {
               className="w-full h-full object-contain rounded-[11px] bg-white" 
             />
           </div>
-          <span className="inline-block px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full uppercase tracking-wider mb-3">
-            Fast, Free & Unlimited
-          </span>
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-3">
-            reeldrop<span className="text-indigo-600">now</span>
+            Instagram Reels Download
           </h1>
           <p className="text-lg md:text-xl text-indigo-600 font-semibold mb-2">
-            Download Instagram Reels Video online to your device.
+            Fastest tool to download reels video:
           </p>
-          <p className="text-sm text-gray-500 max-w-lg mx-auto">
-            High definition MP4 downloads, original audio quality, no software or registration needed.
+          <p className="text-sm sm:text-base font-medium text-gray-500 max-w-lg mx-auto">
+            No Logo | High Quality | unlimited
           </p>
         </header>
 
