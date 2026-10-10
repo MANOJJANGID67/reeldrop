@@ -3,8 +3,8 @@ import Link from 'next/link';
 import MediaDownloader from '@/components/MediaDownloader';
 
 export const metadata: Metadata = {
-  title: 'Instagram Story Downloader - Save Stories Online',
-  description: 'Download Instagram Stories and Highlights in high-quality MP4. Fast, free online tool for public Instagram stories.',
+  title: 'Instagram Story Downloader & Saver Online Free | reeldropnow',
+  description: 'Easily download Instagram stories or highlights anonymously in HD. Save story photos and videos with music from Instagram to Android, iPhone or PC.',
   alternates: { canonical: 'https://reeldropnow.com/instagram-story-downloader' }
 };
 
@@ -31,7 +31,7 @@ export default function InstagramStoryDownloaderPage() {
   const jsonLdApp = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
-    name: 'reeldropnow Instagram Story Downloader',
+    name: 'Instagram Story Downloader & Saver Online Free',
     url: 'https://reeldropnow.com/instagram-story-downloader',
     applicationCategory: 'MultimediaApplication',
     operatingSystem: 'iOS, Android, Windows, macOS, Linux',
@@ -40,7 +40,7 @@ export default function InstagramStoryDownloaderPage() {
       price: '0',
       priceCurrency: 'USD'
     },
-    description: 'Free online tool to save public Instagram Stories and Highlights.'
+    description: 'Easily download Instagram stories or highlights anonymously in HD. Save story photos and videos with music from Instagram to Android, iPhone or PC.'
   };
 
   const jsonLdFaq = {
@@ -89,19 +89,19 @@ export default function InstagramStoryDownloaderPage() {
 
       <header className="text-center max-w-2xl mx-auto mb-4">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-3">
-          Free Online Instagram Story Downloader
+          Instagram Story Downloader &amp; Saver Online Free
         </h1>
         <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-          Save active public Instagram Stories and profile Highlights in full resolution. No apps, no watermarks, and zero account logins.
+          Easily download Instagram stories or highlights anonymously in HD. Save story photos and videos with music from Instagram to Android, iPhone or PC.
         </p>
       </header>
 
       {/* Downloader is immediately visible above the fold */}
       <MediaDownloader
         serviceType="story"
-        defaultPlaceholder="Paste public Instagram Story or Highlight link here..."
+        defaultPlaceholder="Paste Instagram Story or Highlight link (e.g. https://www.instagram.com/stories/...)"
         buttonText="Download Instagram Story"
-        badgeText="Story Downloader • Public Stories"
+        badgeText="Story Downloader • Anonymous &amp; Free"
       />
 
       <article className="mt-12 space-y-10">

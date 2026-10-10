@@ -86,8 +86,12 @@ export async function POST(req: NextRequest) {
     }
 
     const responseHeaders = new Headers();
-    responseHeaders.set('Content-Type', 'video/mp4');
-    responseHeaders.set('Content-Disposition', 'attachment; filename="reeldrop.mp4"');
+    const upstreamContentType = workerResponse.headers.get('content-type') || 'video/mp4';
+    responseHeaders.set('Content-Type', upstreamContentType);
+    
+    const isImage = upstreamContentType.includes('image') || upstreamContentType.includes('jpeg') || upstreamContentType.includes('png');
+    const ext = isImage ? 'jpg' : 'mp4';
+    responseHeaders.set('Content-Disposition', `attachment; filename="reeldrop_${Date.now()}.${ext}"`);
 
     return new Response(workerResponse.body, {
       status: 200,

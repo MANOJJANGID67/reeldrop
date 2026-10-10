@@ -60,11 +60,13 @@ export default function MediaDownloader({
       }
 
       const blob = await res.blob();
+      const isImage = blob.type.includes('image') || blob.type.includes('jpeg') || blob.type.includes('png');
+      const ext = isImage ? 'jpg' : 'mp4';
       const downloadUrl = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = downloadUrl;
       const prefix = serviceType === 'facebook' ? 'fbreel' : serviceType;
-      a.download = `reeldropnow_${prefix}_${Date.now()}.mp4`;
+      a.download = `reeldropnow_${prefix}_${Date.now()}.${ext}`;
       document.body.appendChild(a);
       a.click();
       a.remove();
