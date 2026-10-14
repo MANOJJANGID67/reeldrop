@@ -176,12 +176,15 @@ export default function Home() {
         </div>
 
         {/* Legal & Policy Highlights */}
-        <div className="mt-8 pt-6 border-t border-gray-100 space-y-4 text-xs text-gray-500">
+        <div className="mt-8 pt-6 border-t border-gray-100 space-y-3 text-xs text-gray-500 text-center">
           <div className="flex justify-center space-x-6 text-sm font-medium">
             <Link href="/privacy" className="hover:text-indigo-600 transition-colors">Privacy Policy</Link>
             <Link href="/terms" className="hover:text-indigo-600 transition-colors">Terms of Service</Link>
             <Link href="/dmca" className="hover:text-indigo-600 transition-colors">DMCA</Link>
           </div>
+          <p className="text-[11px] text-gray-400">
+            Disclaimer: reeldropnow is an independent public media extraction utility. We are not affiliated with, authorized, maintained, sponsored, or endorsed by Instagram™, Meta Platforms, Inc., or any of their affiliates.
+          </p>
         </div>
       </div>
       
