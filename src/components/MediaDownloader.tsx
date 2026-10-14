@@ -193,6 +193,10 @@ export default function MediaDownloader({
           No account login needed
         </span>
       </div>
+
+      <div className="mt-3 pt-2 text-center text-[10px] text-gray-400">
+        reeldropnow is an independent public utility not affiliated with, sponsored by, or endorsed by Instagram™, Facebook™, or Meta Platforms, Inc.
+      </div>
     </div>
   );
 }
