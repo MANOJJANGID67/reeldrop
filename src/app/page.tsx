@@ -48,13 +48,13 @@ export default function Home() {
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-4 sm:p-6">
       <div className="w-full max-w-3xl bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100">
         <header className="text-center mb-10 flex flex-col items-center">
-          <div className="w-16 h-16 md:w-20 md:h-20 mb-4 p-1.5 rounded-2xl bg-gradient-to-tr from-amber-400 via-rose-500 to-indigo-600 shadow-md">
+          <div className="w-16 h-16 md:w-20 md:h-20 mb-4 p-1.5 rounded-2xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-violet-600 shadow-md shadow-indigo-200">
             <img 
               src="/logo.svg" 
               alt="reeldropnow logo" 
               width={80}
               height={80}
-              className="w-full h-full object-contain rounded-[11px] bg-white" 
+              className="w-full h-full object-contain rounded-[11px]" 
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight mb-3">
