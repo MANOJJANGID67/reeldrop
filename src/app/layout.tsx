@@ -60,14 +60,14 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.png', sizes: 'any', type: 'image/png' },
-      { url: '/logo.svg', type: 'image/svg+xml' },
       { url: '/favicon.ico', sizes: 'any' },
+      { url: '/icon.png', sizes: '512x512', type: 'image/png' },
+      { url: '/logo.svg', type: 'image/svg+xml' },
     ],
     apple: [
       { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
     ],
-    shortcut: '/icon.png',
+    shortcut: '/favicon.ico',
   },
   other: {
     'google-adsense-account': 'ca-pub-1524992524941156',
